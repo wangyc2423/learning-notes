@@ -4,7 +4,7 @@
 
 * tmux ls：列出所有会话
 
-* tmux attach -t name：连接name会话
+* tmux attach -t name：连接name会话（-d 可以踢掉连接此session的其他终端）
 
 * c_b + w：列出所有window
 
