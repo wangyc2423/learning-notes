@@ -12,7 +12,7 @@ ObjectRef (用户接口，类似 shared_ptr)
 
 需要声明类型信息
 
-```
+```c++
 TVM_FFI_DECLARE_OBJECT_INFO_FINAL(TypeKey, TypeName, Parent_TypeName);
 ```
 
@@ -23,7 +23,7 @@ ObjectPtr 是 TVM runtime 的“所有权指针”
 
 同样需要声明
 
-```
+```c++
 TVM_FFI_DEFINE_OBJECT_REF_METHODS_NULLABLE(TypeName, ParentType, ObjectName)
 ```
 
@@ -33,7 +33,7 @@ TVM_FFI_DEFINE_OBJECT_REF_METHODS_NULLABLE(TypeName, ParentType, ObjectName)
 
 ## FunctionObj
 
-FunctionObj是Object的子类，是存储函数的地方
+FunctionObj是Object的子类，是存储函数指针的地方
 
 有cpp_call（异常处理：抛出c++异常） & safe_call（异常处理：返回错误码，必须实现）
 

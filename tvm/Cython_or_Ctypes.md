@@ -95,7 +95,7 @@ cpdef int add(int a, int b):
 
 ### c变量，指针，数组
 
-``` cython
+```cython
 cdef int a
 ```
 
