@@ -79,11 +79,10 @@ ENTRYPOINT ["python", "train.py"] #指定容器的作用，在容器启动的时
                                   #参数，那真正的命令就是ENTRYPOINT + CMD
 
 CMD ["bash"] #默认启动命令，会被docker run 的命令覆盖
-
 ```
-
-
 
 build镜像
 
-docker build --build-arg ABC=1 -t name . 
+`docker build --build-arg ABC=1 -t name . `
+
+
