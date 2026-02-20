@@ -169,3 +169,47 @@ thread_local：cc关键字，表示该变量在每个线程都有一份副本，
 ### ConstructorCall
 
 类似于FuncCall，但用于构造对象
+
+# python侧主要的三个函数
+
+`def register_object(type_key: str | None = None) -> Callable[[_T], _T]:`
+
+返回一个函数（该函数接收一个类，并返回一个类）
+
+首先通过c api根据type key得到注册好的type index
+
+之后根据index得到typeinfo，得到key（python str）；用 C++ 的 type_index 对应的 TVMFFITypeInfo，在 Python 里构造一个 TypeInfo，并把传入的 Python 类 type_cls以及信息填进去；把「type_index / type_key / type_cls ↔ TypeInfo」写进四个全局结构
+
+之后给 cls 挂 property（field.getter/setter）和 方法（method.as_callable）；按需设置 init_
+
+最后类上保存 TypeInfo，方便后续按类查类型信息
+
+` def register_global_func(func_name: str | Callable[..., Any], f: Callable[..., Any] | None = None, override: bool = False) -> Any` 
+
+首先将传入的pyfunc转化成cc中的Function
+
+之后将得到的Function的指针传递给python
+
+在python侧构造Function，并进行chandle赋值
+
+最后再注册进全局函数注册表内
+
+` def _get_global_func(name: str, allow_missing: bool):`
+
+根据全局注册表获得chandle，构建Function并返回
+
+## ObjectDef
+
+- 实现：TypeTable（在 object.cc 里），内部是 type_table_[type_index]，用 type_index（整数） 做下标，每个槽位是一个 Entry（继承自 TVMFFITypeInfo，再加上 fields/methods/metadata 等）。
+
+- 注册：ObjectDef<MyClass>() 构造时先取 type_index_，之后的 def_ro/def_rw/def/def_static 等都会用这个 type_index_ 调 TVMFFITypeRegisterField(type_index_, ...)、TVMFFITypeRegisterMethod(type_index_, ...)、TVMFFITypeRegisterMetadata(type_index_, ...)，把字段、方法、元数据挂到该 type 的 Entry 上。
+
+- 查找：拿到某个对象的 type_index（例如 obj->header_.type_index）后，用 TVMFFIGetTypeInfo(type_index) → TypeTable::Global()->GetTypeEntry(type_index) 得到该类型的 TVMFFITypeInfo*（实际是 Entry），里面就有 fields、methods、metadata。
+
+## GlobalDef
+
+- 实现：GlobalFunctionTable（在 function.cc 里），内部是 Map<String, Any> table_，用函数名（字符串）做 key。
+
+- 注册：GlobalDef().def("name", func) 等会走到 TVMFFIFunctionSetGlobal / TVMFFIFunctionSetGlobalFromMethodInfo，把 (name, Function) 放进这张表。
+
+- 查找：Python/C 调 TVMFFIFunctionGetGlobal(name) 时，用名字在表里查，得到对应的 Function（即 TVMFFIMethodInfo 风格的 Entry）。
