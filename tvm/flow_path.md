@@ -210,3 +210,27 @@ out = R.call_tir(
 #### 控制流
 
 if/else、while
+
+# script -> IRModule
+
+## 无python函数
+
+1. 得到AST
+
+2. 通过FFI构建c++侧的IRBuilder类型的builder对象，维护一个frame栈
+
+3. 遍历AST，根据不同token（tir，relax等）和类型（ClassDef，FunctionDef等）通过各种visit_方法，通过FFI在c++构建对应的frame，并在退出with的时候，构造对应的对象（如IRModule、TIR等）（最外层 frame 的结果保存到 builder->result，内层 frame 的结果交给父 frame，最终由最外层统一体现到 builder 上），并将结果保存到builder供python使用
+
+4. 通过python侧的builder获得IRModule
+
+## 有python函数
+
+1. 得到 AST，并收集“可能作为 pyfunc 的方法
+
+2. 通过 FFI 构建 C++ 的 IRBuilder，维护 frame 栈
+
+3.  遍历 AST，按 token + 类型 visit；pyfunc 只声明为 ExternFunc，不解析函数体
+
+4. 通过 Python 的 builder 拿到 IRModule，再把 Python 可调用对象挂上去
+
+5. 最后返回的是一个经过编译处理的类，能够实例化后直接运行
