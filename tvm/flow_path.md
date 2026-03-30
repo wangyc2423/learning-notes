@@ -229,8 +229,32 @@ if/else、while
 
 2. 通过 FFI 构建 C++ 的 IRBuilder，维护 frame 栈
 
-3.  遍历 AST，按 token + 类型 visit；pyfunc 只声明为 ExternFunc，不解析函数体
+3. 遍历 AST，按 token + 类型 visit；pyfunc 只声明为 ExternFunc，不解析函数体
 
 4. 通过 Python 的 builder 拿到 IRModule，再把 Python 可调用对象挂上去
 
 5. 最后返回的是一个经过编译处理的类，能够实例化后直接运行
+
+## 过程
+
+1. 转化成python AST，之后转化成doc AST
+
+2. 进入TVM通用解析框架
+   
+   1. 拿到doc AST，创建IRBuilder，进入parse阶段，切换到对应frame解释器
+   
+   2. 内部有对应的各种节点和dispatch token的解释器
+   
+   3. 解释器内会将对应的frame押入irbuilder的栈内，并在对应环境下真正调用在python层的定义函数
+   
+   4. 之后返回创建的对象
+   
+   5. 最终把构造好的IR挂在builder上
+
+3. 最终各个IR组成一个IR树
+
+@I.ir_module 里的 TIR 方法：
+
+- @T.prim_func 在类定义阶段变成“空装饰器”（不调用 parse，只返回原函数）。
+- 真正的解析是由外层 @I.ir_module 调 parse(整个类, ...) 完成的。
+- 内部每个方法的 decorator（包括 @T.prim_func）只被当成“标签”，通过 dispatch_token="tir" 把它路由到 TIR 子解析器。

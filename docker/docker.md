@@ -84,5 +84,3 @@ CMD ["bash"] #默认启动命令，会被docker run 的命令覆盖
 build镜像
 
 `docker build --build-arg ABC=1 -t name . `
-
-
