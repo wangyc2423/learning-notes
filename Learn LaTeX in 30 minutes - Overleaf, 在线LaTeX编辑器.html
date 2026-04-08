@@ -1,0 +1,1225 @@
+<!DOCTYPE html><html lang="zh-CN"><head><title translate="no">Learn LaTeX in 30 minutes - Overleaf, 在线LaTeX编辑器</title><meta name="twitter:title" content="Learn LaTeX in 30 minutes"><meta name="og:title" content="Learn LaTeX in 30 minutes"><meta name="description" content="一个简洁的在线 LaTeX 编辑器。无需安装，实时共享，版本控制，数百免费模板……"><meta itemprop="description" content="一个简洁的在线 LaTeX 编辑器。无需安装，实时共享，版本控制，数百免费模板……"><meta itemprop="image" content="https://cdn.overleaf.com/img/ol-brand/overleaf_og_logo.png"><meta name="image" content="https://cdn.overleaf.com/img/ol-brand/overleaf_og_logo.png"><meta itemprop="name" content="Overleaf, the Online LaTeX Editor"><meta name="twitter:card" content="summary"><meta name="twitter:site" content="@overleaf"><meta name="twitter:description" content="一个简洁的在线 LaTeX 编辑器。无需安装，实时共享，版本控制，数百免费模板……"><meta name="twitter:image" content="https://cdn.overleaf.com/img/ol-brand/overleaf_og_logo.png"><meta property="fb:app_id" content="400474170024644"><meta property="og:description" content="一个简洁的在线 LaTeX 编辑器。无需安装，实时共享，版本控制，数百免费模板……"><meta property="og:image" content="https://cdn.overleaf.com/img/ol-brand/overleaf_og_logo.png"><meta property="og:type" content="website"><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes"><link rel="icon" sizes="32x32" href="https://cdn.overleaf.com/favicon-32x32.png"><link rel="icon" sizes="16x16" href="https://cdn.overleaf.com/favicon-16x16.png"><link rel="icon" href="https://cdn.overleaf.com/favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="https://cdn.overleaf.com/apple-touch-icon.png"><link rel="mask-icon" href="https://cdn.overleaf.com/mask-favicon.svg" color="#046530"><link rel="canonical" href="https://cn.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes"><link rel="manifest" href="https://cdn.overleaf.com/web.sitemanifest"><link rel="stylesheet" href="https://cdn.overleaf.com/stylesheets/main-style-0894dcdc53e6deb6e1d8.css" id="main-stylesheet"><link rel="alternate" href="https://www.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes" hreflang="en"><link rel="alternate" href="https://cs.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes" hreflang="cs"><link rel="alternate" href="https://es.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes" hreflang="es"><link rel="alternate" href="https://pt.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes" hreflang="pt"><link rel="alternate" href="https://fr.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes" hreflang="fr"><link rel="alternate" href="https://de.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes" hreflang="de"><link rel="alternate" href="https://sv.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes" hreflang="sv"><link rel="alternate" href="https://tr.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes" hreflang="tr"><link rel="alternate" href="https://it.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes" hreflang="it"><link rel="alternate" href="https://cn.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes" hreflang="zh-CN"><link rel="alternate" href="https://no.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes" hreflang="no"><link rel="alternate" href="https://ru.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes" hreflang="ru"><link rel="alternate" href="https://da.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes" hreflang="da"><link rel="alternate" href="https://ko.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes" hreflang="ko"><link rel="alternate" href="https://ja.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes" hreflang="ja"><link rel="preload" href="https://cdn.overleaf.com/js/zh-CN-json-a5baa32119ea9e80f7c9.js" as="script" nonce="KU6GG7EmVDvL8NlyWeiK/g=="><script type="text/javascript" nonce="KU6GG7EmVDvL8NlyWeiK/g==" id="ga-loader" data-ga-token="UA-112092690-1" data-ga-token-v4="G-RV4YBCCCWJ" data-cookie-domain=".overleaf.com" data-session-analytics-id="6b50435c-c74e-434c-adf9-e63792ec3795">var gaSettings = document.querySelector('#ga-loader').dataset;
+var gaid = gaSettings.gaTokenV4;
+var gaToken = gaSettings.gaToken;
+var cookieDomain = gaSettings.cookieDomain;
+var sessionAnalyticsId = gaSettings.sessionAnalyticsId;
+if(gaid) {
+    var additionalGaConfig = sessionAnalyticsId ? { 'user_id': sessionAnalyticsId } : {};
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', gaid, { 'anonymize_ip': true, ...additionalGaConfig });
+}
+if (gaToken) {
+    window.ga = window.ga || function () {
+        (window.ga.q = window.ga.q || []).push(arguments);
+    }, window.ga.l = 1 * new Date();
+}
+var loadGA = window.olLoadGA = function() {
+    if (gaid) {
+        var s = document.createElement('script');
+        s.setAttribute('async', 'async');
+        s.setAttribute('src', 'https://www.googletagmanager.com/gtag/js?id=' + gaid);
+        document.querySelector('head').append(s);
+    } 
+    if (gaToken) {
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', gaToken, cookieDomain.replace(/^\./, ""));
+        ga('set', 'anonymizeIp', true);
+        if (sessionAnalyticsId) {
+            ga('set', 'userId', sessionAnalyticsId);
+        }
+        ga('send', 'pageview');
+    }
+};
+// Check if consent given (features/cookie-banner)
+var oaCookie = document.cookie.split('; ').find(function(cookie) {
+    return cookie.startsWith('oa=');
+});
+if(oaCookie) {
+    var oaCookieValue = oaCookie.split('=')[1];
+    if(oaCookieValue === '1') {
+        loadGA();
+    }
+}
+</script><meta name="ol-csrfToken" content="iAhrvVoP-hs_622b41PtisCnSS1ukz74MpgM"><meta name="ol-baseAssetPath" content="https://cdn.overleaf.com/"><meta name="ol-mathJaxPath" content="/js/libs/mathjax-3.2.2/es5/tex-svg-full.js"><meta name="ol-dictionariesRoot" content="/js/dictionaries/0.0.3/"><meta name="ol-usersEmail" content="wangyc030924@gmail.com"><meta name="ol-ab" data-type="json" content="{}"><meta name="ol-user_id" content="69d6437041c3894116231639"><meta name="ol-i18n" data-type="json" content="{&quot;currentLangCode&quot;:&quot;zh-CN&quot;}"><meta name="ol-ExposedSettings" data-type="json" content="{&quot;isOverleaf&quot;:true,&quot;appName&quot;:&quot;Overleaf&quot;,&quot;adminEmail&quot;:&quot;support@overleaf.com&quot;,&quot;dropboxAppName&quot;:&quot;Overleaf&quot;,&quot;ieeeBrandId&quot;:15,&quot;hasAffiliationsFeature&quot;:true,&quot;hasSamlFeature&quot;:true,&quot;samlInitPath&quot;:&quot;/saml/ukamf/init&quot;,&quot;hasLinkUrlFeature&quot;:true,&quot;hasLinkedProjectFileFeature&quot;:true,&quot;hasLinkedProjectOutputFileFeature&quot;:true,&quot;siteUrl&quot;:&quot;https://www.overleaf.com&quot;,&quot;emailConfirmationDisabled&quot;:false,&quot;maxEntitiesPerProject&quot;:2000,&quot;maxUploadSize&quot;:52428800,&quot;projectUploadTimeout&quot;:120000,&quot;recaptchaSiteKey&quot;:&quot;6LebiTwUAAAAAMuPyjA4pDA4jxPxPe2K9_ndL74Q&quot;,&quot;recaptchaDisabled&quot;:{&quot;invite&quot;:true,&quot;login&quot;:false,&quot;passwordReset&quot;:false,&quot;register&quot;:false,&quot;addEmail&quot;:false},&quot;textExtensions&quot;:[&quot;tex&quot;,&quot;latex&quot;,&quot;sty&quot;,&quot;cls&quot;,&quot;bst&quot;,&quot;bib&quot;,&quot;bibtex&quot;,&quot;txt&quot;,&quot;tikz&quot;,&quot;mtx&quot;,&quot;rtex&quot;,&quot;md&quot;,&quot;asy&quot;,&quot;lbx&quot;,&quot;bbx&quot;,&quot;cbx&quot;,&quot;m&quot;,&quot;lco&quot;,&quot;dtx&quot;,&quot;ins&quot;,&quot;ist&quot;,&quot;def&quot;,&quot;clo&quot;,&quot;ldf&quot;,&quot;rmd&quot;,&quot;lua&quot;,&quot;gv&quot;,&quot;mf&quot;,&quot;yml&quot;,&quot;yaml&quot;,&quot;lhs&quot;,&quot;lean&quot;,&quot;lean4&quot;,&quot;hs&quot;,&quot;mk&quot;,&quot;xmpdata&quot;,&quot;cfg&quot;,&quot;rnw&quot;,&quot;ltx&quot;,&quot;inc&quot;],&quot;editableFilenames&quot;:[&quot;latexmkrc&quot;,&quot;.latexmkrc&quot;,&quot;makefile&quot;,&quot;gnumakefile&quot;],&quot;validRootDocExtensions&quot;:[&quot;tex&quot;,&quot;Rtex&quot;,&quot;ltx&quot;,&quot;Rnw&quot;],&quot;fileIgnorePattern&quot;:&quot;**/{{__MACOSX,.git,.texpadtmp,.R}{,/**},.!(latexmkrc),*.{dvi,aux,log,toc,out,pdfsync,synctex,synctex(busy),fdb_latexmk,fls,nlo,ind,glo,gls,glg,bbl,blg,doc,docx,gz,swp}}&quot;,&quot;sentryAllowedOriginRegex&quot;:&quot;^(https://[a-z]+\\\\.overleaf.com|https://cdn.overleaf.com|https://compiles.overleafusercontent.com)/&quot;,&quot;sentryDsn&quot;:&quot;https://4f0989f11cb54142a5c3d98b421b930a@app.getsentry.com/34706&quot;,&quot;sentryEnvironment&quot;:&quot;production&quot;,&quot;sentryRelease&quot;:&quot;f319fbae7da4c85d21e6c100bb2f6e6ef7c472b3&quot;,&quot;hotjarId&quot;:&quot;5148484&quot;,&quot;hotjarVersion&quot;:&quot;6&quot;,&quot;enableSubscriptions&quot;:true,&quot;gaToken&quot;:&quot;UA-112092690-1&quot;,&quot;gaTokenV4&quot;:&quot;G-RV4YBCCCWJ&quot;,&quot;propensityId&quot;:&quot;propensity-001384&quot;,&quot;cookieDomain&quot;:&quot;.overleaf.com&quot;,&quot;templateLinks&quot;:[{&quot;name&quot;:&quot;Journal articles&quot;,&quot;url&quot;:&quot;/gallery/tagged/academic-journal&quot;,&quot;trackingKey&quot;:&quot;academic-journal&quot;},{&quot;name&quot;:&quot;Books&quot;,&quot;url&quot;:&quot;/gallery/tagged/book&quot;,&quot;trackingKey&quot;:&quot;book&quot;},{&quot;name&quot;:&quot;Formal letters&quot;,&quot;url&quot;:&quot;/gallery/tagged/formal-letter&quot;,&quot;trackingKey&quot;:&quot;formal-letter&quot;},{&quot;name&quot;:&quot;Assignments&quot;,&quot;url&quot;:&quot;/gallery/tagged/homework&quot;,&quot;trackingKey&quot;:&quot;homework-assignment&quot;},{&quot;name&quot;:&quot;Posters&quot;,&quot;url&quot;:&quot;/gallery/tagged/poster&quot;,&quot;trackingKey&quot;:&quot;poster&quot;},{&quot;name&quot;:&quot;Presentations&quot;,&quot;url&quot;:&quot;/gallery/tagged/presentation&quot;,&quot;trackingKey&quot;:&quot;presentation&quot;},{&quot;name&quot;:&quot;Reports&quot;,&quot;url&quot;:&quot;/gallery/tagged/report&quot;,&quot;trackingKey&quot;:&quot;lab-report&quot;},{&quot;name&quot;:&quot;CVs and résumés&quot;,&quot;url&quot;:&quot;/gallery/tagged/cv&quot;,&quot;trackingKey&quot;:&quot;cv&quot;},{&quot;name&quot;:&quot;Theses&quot;,&quot;url&quot;:&quot;/gallery/tagged/thesis&quot;,&quot;trackingKey&quot;:&quot;thesis&quot;},{&quot;name&quot;:&quot;view_all&quot;,&quot;url&quot;:&quot;/latex/templates&quot;,&quot;trackingKey&quot;:&quot;view-all&quot;}],&quot;labsEnabled&quot;:true,&quot;wikiEnabled&quot;:true,&quot;templatesEnabled&quot;:true,&quot;cioWriteKey&quot;:&quot;2530db5896ec00db632a&quot;,&quot;cioSiteId&quot;:&quot;6420c27bb72163938e7d&quot;,&quot;linkedInInsightsPartnerId&quot;:&quot;7472905&quot;,&quot;enablePandocConversions&quot;:true}"><meta name="ol-splitTestVariants" data-type="json" content="{&quot;null-test-wiki&quot;:&quot;default&quot;}"><meta name="ol-splitTestInfo" data-type="json" content="{}"><meta name="ol-algolia" data-type="json" content="{&quot;appId&quot;:&quot;SK53GL4JLY&quot;,&quot;apiKey&quot;:&quot;9ac63d917afab223adbd2cd09ad0eb17&quot;,&quot;indexes&quot;:{&quot;wiki&quot;:&quot;learn-wiki&quot;,&quot;gallery&quot;:&quot;gallery-production&quot;}}"><meta name="ol-isManagedAccount" data-type="boolean"></head><body data-theme="light"><a class="skip-to-content" href="#main-content">跳到内容</a><nav class="navbar navbar-default navbar-main navbar-expand-lg" aria-label="Primary"><div class="container-fluid navbar-container"><div class="navbar-header"><a class="navbar-brand" href="/" aria-label="Overleaf"><div class="navbar-logo"></div></a></div><button class="navbar-toggler collapsed" id="navbar-toggle-btn" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-main-collapse" aria-controls="navbar-main-collapse" aria-expanded="false" aria-label="Toggle 导航"><span class="material-symbols" aria-hidden="true" translate="no">menu</span></button><div class="navbar-collapse collapse" id="navbar-main-collapse"><ul class="nav navbar-nav navbar-right ms-auto" role="menubar"><!-- loop over header_extras--><li class="dropdown subdued" role="none"><button class="dropdown-toggle" aria-haspopup="true" aria-expanded="false" data-bs-toggle="dropdown" role="menuitem" event-tracking="menu-expand" event-tracking-mb="true" event-tracking-trigger="click" event-segmentation="{&quot;item&quot;:&quot;product&quot;,&quot;location&quot;:&quot;top-menu&quot;}">Product</button><ul class="dropdown-menu dropdown-menu-end" role="menu"><li role="none"><a class="dropdown-item" role="menuitem" href="/about/features-overview" event-tracking="menu-click" event-tracking-mb="true" event-tracking-trigger="click" event-segmentation='{"item":"premium-features","location":"top-menu"}'>功能</a></li><li role="none"><a class="dropdown-item" role="menuitem" href="/about/ai-features" event-tracking="menu-click" event-tracking-mb="true" event-tracking-trigger="click" event-segmentation='{"item":"ai-features","location":"top-menu"}'>AI</a></li></ul></li><li class="dropdown subdued" role="none"><button class="dropdown-toggle" aria-haspopup="true" aria-expanded="false" data-bs-toggle="dropdown" role="menuitem" event-tracking="menu-expand" event-tracking-mb="true" event-tracking-trigger="click" event-segmentation="{&quot;item&quot;:&quot;solutions&quot;,&quot;location&quot;:&quot;top-menu&quot;}">Solutions</button><ul class="dropdown-menu dropdown-menu-end" role="menu"><li role="none"><a class="dropdown-item" role="menuitem" href="/for/enterprises" event-tracking="menu-click" event-tracking-mb="true" event-tracking-trigger="click" event-segmentation='{"item":"enterprises","location":"top-menu"}'>商业用途</a></li><li role="none"><a class="dropdown-item" role="menuitem" href="/for/universities" event-tracking="menu-click" event-tracking-mb="true" event-tracking-trigger="click" event-segmentation='{"item":"universities","location":"top-menu"}'>为大学提供</a></li><li role="none"><a class="dropdown-item" role="menuitem" href="/for/government" event-tracking="menu-click" event-tracking-mb="true" event-tracking-trigger="click" event-segmentation='{"item":"government","location":"top-menu"}'>为政府提供</a></li><li role="none"><a class="dropdown-item" role="menuitem" href="/for/publishers" event-tracking="menu-click" event-tracking-mb="true" event-tracking-trigger="click" event-segmentation='{"item":"publishers","location":"top-menu"}'>为出版社提供</a></li><li role="none"><a class="dropdown-item" role="menuitem" href="/about/customer-stories" event-tracking="menu-click" event-tracking-mb="true" event-tracking-trigger="click" event-segmentation='{"item":"customer-stories","location":"top-menu"}'>Customer stories</a></li></ul></li><li class="subdued" role="none"><a class="nav-link subdued" role="menuitem" href="/latex/templates" event-tracking="menu-click" event-tracking-mb="true" event-tracking-trigger="click" event-segmentation='{"item":"templates","location":"top-menu"}'>模板</a></li><li class="subdued" role="none"><a class="nav-link subdued" role="menuitem" href="/user/subscription/plans" event-tracking="menu-click" event-tracking-mb="true" event-tracking-trigger="click" event-segmentation='{"item":"pricing","location":"top-menu"}'>Pricing</a></li><li class="dropdown subdued nav-item-help" role="none"><button class="dropdown-toggle" aria-haspopup="true" aria-expanded="false" data-bs-toggle="dropdown" role="menuitem" event-tracking="menu-expand" event-tracking-mb="true" event-tracking-trigger="click" event-segmentation="{&quot;item&quot;:&quot;help-and-resources&quot;,&quot;location&quot;:&quot;top-menu&quot;}">Help & resources</button><ul class="dropdown-menu dropdown-menu-end" role="menu"><li role="none"><a class="dropdown-item" role="menuitem" href="/learn" event-tracking="menu-click" event-tracking-mb="true" event-tracking-trigger="click" event-segmentation='{"item":"learn","location":"top-menu"}'>文档</a></li><li role="none"><a class="dropdown-item" role="menuitem" href="/for/community/resources" event-tracking="menu-click" event-tracking-mb="true" event-tracking-trigger="click" event-segmentation='{"item":"help-guides","location":"top-menu"}'>Help guides</a></li><li role="none"><a class="dropdown-item" role="menuitem" href="/about/why-latex" event-tracking="menu-click" event-tracking-mb="true" event-tracking-trigger="click" event-segmentation='{"item":"why-latex","location":"top-menu"}'>为何用 LaTeX?</a></li><li role="none"><a class="dropdown-item" role="menuitem" href="/blog" event-tracking="menu-click" event-tracking-mb="true" event-tracking-trigger="click" event-segmentation='{"item":"blog","location":"top-menu"}'>博客</a></li><li role="none"><a class="dropdown-item" role="menuitem" data-ol-open-contact-form-modal="contact-us" data-bs-target="#contactUsModal" href data-bs-toggle="modal" event-tracking="menu-click" event-tracking-mb="true" event-tracking-trigger="click" event-segmentation='{"item":"contact","location":"top-menu"}'><span>联系我们</span></a></li></ul></li><!-- logged out--><!-- projects link and account menu--><li role="none"><a class="nav-link" role="menuitem" href="/project">项目</a></li><li class="dropdown" role="none"><button class="dropdown-toggle" aria-haspopup="true" aria-expanded="false" data-bs-toggle="dropdown" role="menuitem" event-tracking="menu-expand" event-tracking-mb="true" event-tracking-trigger="click" event-segmentation="{&quot;item&quot;:&quot;account&quot;,&quot;location&quot;:&quot;top-menu&quot;}">账户</button><ul class="dropdown-menu dropdown-menu-end" role="menu"><li role="none"><div class="disabled dropdown-item">wangyc030924@gmail.com</div></li><li class="dropdown-divider d-none d-lg-block" role="separator"></li><li role="none"><a class="dropdown-item" role="menuitem" href="/user/settings">账户设置</a></li><li role="none"><a class="dropdown-item" role="menuitem" href="/user/subscription">订购</a></li><li class="dropdown-divider d-none d-lg-block" role="separator"></li><li role="none"><button class="btn-link text-left dropdown-menu-button dropdown-item" role="menuitem" tabindex="-1" form="logOutForm">退出</button><form method="POST" action="/logout" id="logOutForm"><input name="_csrf" type="hidden" value="iAhrvVoP-hs_622b41PtisCnSS1ukz74MpgM"></form></li></ul></li></ul></div></div></nav><div class="content content-page content-alt"><div class="container wiki"><div class="row row-spaced-large"><div class="col-12 col-md-9 order-md-5 page"><search class="wiki"><form class="project-search form-horizontal" role="search" data-ol-faq-search><div class="form-group has-feedback has-feedback-left"><div class="col-12"><div class="form-control-wrapper"><label class="visually-hidden" for="search-help-library">Search help library…</label><span class="form-control-start-icon"><span class="material-symbols form-control-feedback-left" aria-hidden="true" translate="no">search</span></span><input class="form-control form-control-offset-start form-control-offset-end" id="search-help-library" type="text" placeholder="Search help library…" data-ol-search-input><span class="form-control-end-icon"><button class="form-control-search-clear-btn" type="button" hidden data-ol-clear-search aria-label="清除搜索"><span class="material-symbols" aria-hidden="true" translate="no">clear</span></button></span></div></div></div><div class="row" role="region" aria-label="search results"><div class="col-12"><div data-ol-search-results-wrapper><span class="visually-hidden" aria-live="polite" data-ol-search-sr-help-message></span><div data-ol-search-results></div></div><div class="row-spaced-small search-result card" hidden data-ol-search-no-results><div class="card-body"><p>没有搜索到结果</p></div></div></div></div></form></search><main class="card row-spaced" id="main-content"><div class="card-body"><div class="page-header"><h1>Learn LaTeX in 30 minutes</h1></div><div data-ol-mathjax><div><div class="mw-parser-output"><p>This introductory tutorial does not assume any prior experience of <span class="texhtml" style="font-family:'CMU Serif', cmr10, LMRoman10-Regular, 'Times New Roman', 'Nimbus Roman No9 L', Times, serif">L<span style="text-transform:uppercase;font-size:70%;margin-left:-0.36em;vertical-align:0.3em;line-height:0;margin-right:-0.15em">a</span>T<span style="text-transform:uppercase;margin-left:-0.1667em;vertical-align:-0.5ex;line-height:0;margin-right:-0.125em">e</span>X</span> but, hopefully, by the time you are finished, you will not only have written your first <span class="texhtml" style="font-family:'CMU Serif', cmr10, LMRoman10-Regular, 'Times New Roman', 'Nimbus Roman No9 L', Times, serif">L<span style="text-transform:uppercase;font-size:70%;margin-left:-0.36em;vertical-align:0.3em;line-height:0;margin-right:-0.15em">a</span>T<span style="text-transform:uppercase;margin-left:-0.1667em;vertical-align:-0.5ex;line-height:0;margin-right:-0.125em">e</span>X</span> document but also acquired sufficient knowledge and confidence to take the next steps toward <span class="texhtml" style="font-family:'CMU Serif', cmr10, LMRoman10-Regular, 'Times New Roman', 'Nimbus Roman No9 L', Times, serif">L<span style="text-transform:uppercase;font-size:70%;margin-left:-0.36em;vertical-align:0.3em;line-height:0;margin-right:-0.15em">a</span>T<span style="text-transform:uppercase;margin-left:-0.1667em;vertical-align:-0.5ex;line-height:0;margin-right:-0.125em">e</span>X</span> proficiency.
+</p>
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" /><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#What_is_LaTeX?"><span class="tocnumber">1</span> <span class="toctext">What is <span>L<span>a</span>T<span>e</span>X</span>?</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Why_learn_LaTeX?"><span class="tocnumber">2</span> <span class="toctext">Why learn <span>L<span>a</span>T<span>e</span>X</span>?</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Writing_your_first_piece_of_LaTeX"><span class="tocnumber">3</span> <span class="toctext">Writing your first piece of <span>L<span>a</span>T<span>e</span>X</span></span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#The_preamble_of_a_document"><span class="tocnumber">4</span> <span class="toctext">The preamble of a document</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Including_title,_author_and_date_information"><span class="tocnumber">5</span> <span class="toctext">Including title, author and date information</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#Adding_comments"><span class="tocnumber">6</span> <span class="toctext">Adding comments</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#Bold,_italics_and_underlining"><span class="tocnumber">7</span> <span class="toctext">Bold, italics and underlining</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#Adding_images"><span class="tocnumber">8</span> <span class="toctext">Adding images</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#Captions,_labels_and_references"><span class="tocnumber">9</span> <span class="toctext">Captions, labels and references</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="#Creating_lists_in_LaTeX"><span class="tocnumber">10</span> <span class="toctext">Creating lists in <span>L<span>a</span>T<span>e</span>X</span></span></a>
+<ul>
+<li class="toclevel-2 tocsection-11"><a href="#Unordered_lists"><span class="tocnumber">10.1</span> <span class="toctext">Unordered lists</span></a></li>
+<li class="toclevel-2 tocsection-12"><a href="#Ordered_lists"><span class="tocnumber">10.2</span> <span class="toctext">Ordered lists</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-13"><a href="#Adding_math_to_LaTeX"><span class="tocnumber">11</span> <span class="toctext">Adding math to <span>L<span>a</span>T<span>e</span>X</span></span></a>
+<ul>
+<li class="toclevel-2 tocsection-14"><a href="#Inline_math_mode"><span class="tocnumber">11.1</span> <span class="toctext">Inline math mode</span></a></li>
+<li class="toclevel-2 tocsection-15"><a href="#Display_math_mode"><span class="tocnumber">11.2</span> <span class="toctext">Display math mode</span></a></li>
+<li class="toclevel-2 tocsection-16"><a href="#More_complete_examples"><span class="tocnumber">11.3</span> <span class="toctext">More complete examples</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-17"><a href="#Basic_document_structure"><span class="tocnumber">12</span> <span class="toctext">Basic document structure</span></a>
+<ul>
+<li class="toclevel-2 tocsection-18"><a href="#Abstracts"><span class="tocnumber">12.1</span> <span class="toctext">Abstracts</span></a></li>
+<li class="toclevel-2 tocsection-19"><a href="#Paragraphs_and_new_lines"><span class="tocnumber">12.2</span> <span class="toctext">Paragraphs and new lines</span></a></li>
+<li class="toclevel-2 tocsection-20"><a href="#Chapters_and_sections"><span class="tocnumber">12.3</span> <span class="toctext">Chapters and sections</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-21"><a href="#Creating_tables"><span class="tocnumber">13</span> <span class="toctext">Creating tables</span></a>
+<ul>
+<li class="toclevel-2 tocsection-22"><a href="#Creating_a_basic_table_in_LaTeX"><span class="tocnumber">13.1</span> <span class="toctext">Creating a basic table in <span>L<span>a</span>T<span>e</span>X</span></span></a></li>
+<li class="toclevel-2 tocsection-23"><a href="#Adding_borders"><span class="tocnumber">13.2</span> <span class="toctext">Adding borders</span></a></li>
+<li class="toclevel-2 tocsection-24"><a href="#Captions,_labels_and_references_2"><span class="tocnumber">13.3</span> <span class="toctext">Captions, labels and references</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-25"><a href="#Adding_a_Table_of_Contents"><span class="tocnumber">14</span> <span class="toctext">Adding a Table of Contents</span></a></li>
+<li class="toclevel-1 tocsection-26"><a href="#Downloading_your_finished_document"><span class="tocnumber">15</span> <span class="toctext">Downloading your finished document</span></a></li>
+<li class="toclevel-1 tocsection-27"><a href="#Finding_and_using_LaTeX_packages"><span class="tocnumber">16</span> <span class="toctext">Finding and using LaTeX packages</span></a>
+<ul>
+<li class="toclevel-2 tocsection-28"><a href="#Loading_packages"><span class="tocnumber">16.1</span> <span class="toctext">Loading packages</span></a></li>
+<li class="toclevel-2 tocsection-29"><a href="#Finding_information_about_packages:_CTAN"><span class="tocnumber">16.2</span> <span class="toctext">Finding information about packages: CTAN</span></a></li>
+<li class="toclevel-2 tocsection-30"><a href="#Packages_available_on_Overleaf:_Introducing_TeX_Live"><span class="tocnumber">16.3</span> <span class="toctext">Packages available on Overleaf: Introducing TeX Live</span></a></li>
+</ul>
+</li>
+</ul>
+</div>
+
+<h2><span id="What_is_LaTeX.3F"></span><span class="mw-headline" id="What_is_LaTeX?">What is <span class="texhtml" style="font-family:'CMU Serif', cmr10, LMRoman10-Regular, 'Times New Roman', 'Nimbus Roman No9 L', Times, serif">L<span style="text-transform:uppercase;font-size:70%;margin-left:-0.36em;vertical-align:0.3em;line-height:0;margin-right:-0.15em">a</span>T<span style="text-transform:uppercase;margin-left:-0.1667em;vertical-align:-0.5ex;line-height:0;margin-right:-0.125em">e</span>X</span>?</span></h2>
+<p><span class="texhtml" style="font-family:'CMU Serif', cmr10, LMRoman10-Regular, 'Times New Roman', 'Nimbus Roman No9 L', Times, serif">L<span style="text-transform:uppercase;font-size:70%;margin-left:-0.36em;vertical-align:0.3em;line-height:0;margin-right:-0.15em">a</span>T<span style="text-transform:uppercase;margin-left:-0.1667em;vertical-align:-0.5ex;line-height:0;margin-right:-0.125em">e</span>X</span> (pronounced “<em>LAY</em>-tek” or “<em>LAH</em>-tek”) is a tool for typesetting professional-looking documents. However, LaTeX’s mode of operation is quite different to many other document-production applications you may have used, such as Microsoft Word or LibreOffice Writer: those “<a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/WYSIWYG">WYSIWYG</a>” tools provide users with an interactive page into which they type and edit their text and apply various forms of styling. LaTeX works very differently: instead, your document is a plain text file interspersed with LaTeX <em>commands</em> used to express the desired (typeset) results. To produce a visible, typeset document, your LaTeX file is processed by a piece of software called a <em>TeX engine</em> which uses the commands embedded in your text file to guide and control the typesetting process, converting the LaTeX commands and document text into a professionally typeset PDF file. This means you only need to focus on the <em>content</em> of your document and the computer, via LaTeX commands and the TeX engine, will take care of the <em>visual appearance</em> (formatting).
+</p>
+<h2><span id="Why_learn_LaTeX.3F"></span><span class="mw-headline" id="Why_learn_LaTeX?">Why learn <span class="texhtml" style="font-family:'CMU Serif', cmr10, LMRoman10-Regular, 'Times New Roman', 'Nimbus Roman No9 L', Times, serif">L<span style="text-transform:uppercase;font-size:70%;margin-left:-0.36em;vertical-align:0.3em;line-height:0;margin-right:-0.15em">a</span>T<span style="text-transform:uppercase;margin-left:-0.1667em;vertical-align:-0.5ex;line-height:0;margin-right:-0.125em">e</span>X</span>?</span></h2>
+<p>Various arguments can be proposed for, or against, learning to use <span class="texhtml" style="font-family:'CMU Serif', cmr10, LMRoman10-Regular, 'Times New Roman', 'Nimbus Roman No9 L', Times, serif">L<span style="text-transform:uppercase;font-size:70%;margin-left:-0.36em;vertical-align:0.3em;line-height:0;margin-right:-0.15em">a</span>T<span style="text-transform:uppercase;margin-left:-0.1667em;vertical-align:-0.5ex;line-height:0;margin-right:-0.125em">e</span>X</span> instead of other document-authoring applications; but, ultimately, it is a personal choice based on preferences, affinities, and documentation requirements. 
+</p><p>Arguments in favour of <span class="texhtml" style="font-family:'CMU Serif', cmr10, LMRoman10-Regular, 'Times New Roman', 'Nimbus Roman No9 L', Times, serif">L<span style="text-transform:uppercase;font-size:70%;margin-left:-0.36em;vertical-align:0.3em;line-height:0;margin-right:-0.15em">a</span>T<span style="text-transform:uppercase;margin-left:-0.1667em;vertical-align:-0.5ex;line-height:0;margin-right:-0.125em">e</span>X</span> include:
+</p>
+<ul><li>support for typesetting extremely complex mathematics, tables and technical content for the physical sciences;</li>
+<li>facilities for footnotes, cross-referencing and management of bibliographies;</li>
+<li>ease of producing complicated, or tedious, document elements such as indexes, glossaries, table of contents, lists of figures;</li>
+<li>being highly customizable for bespoke document production due to its intrinsic programmability and extensibility through thousands of <a rel="nofollow" class="external text" href="https://www.ctan.org/pkg">free add-on packages</a>.</li></ul>
+<p>Overall, <span class="texhtml" style="font-family:'CMU Serif', cmr10, LMRoman10-Regular, 'Times New Roman', 'Nimbus Roman No9 L', Times, serif">L<span style="text-transform:uppercase;font-size:70%;margin-left:-0.36em;vertical-align:0.3em;line-height:0;margin-right:-0.15em">a</span>T<span style="text-transform:uppercase;margin-left:-0.1667em;vertical-align:-0.5ex;line-height:0;margin-right:-0.125em">e</span>X</span> provides users with a great deal of control over the production of documents which are typeset to extremely high standards. Of course, there are types of documents or publications where <span class="texhtml" style="font-family:'CMU Serif', cmr10, LMRoman10-Regular, 'Times New Roman', 'Nimbus Roman No9 L', Times, serif">L<span style="text-transform:uppercase;font-size:70%;margin-left:-0.36em;vertical-align:0.3em;line-height:0;margin-right:-0.15em">a</span>T<span style="text-transform:uppercase;margin-left:-0.1667em;vertical-align:-0.5ex;line-height:0;margin-right:-0.125em">e</span>X</span> doesn’t shine, including many “free form” page designs typically found in magazine-type publications.
+</p><p>One important benefit of <span class="texhtml" style="font-family:'CMU Serif', cmr10, LMRoman10-Regular, 'Times New Roman', 'Nimbus Roman No9 L', Times, serif">L<span style="text-transform:uppercase;font-size:70%;margin-left:-0.36em;vertical-align:0.3em;line-height:0;margin-right:-0.15em">a</span>T<span style="text-transform:uppercase;margin-left:-0.1667em;vertical-align:-0.5ex;line-height:0;margin-right:-0.125em">e</span>X</span> is the separation of document content from document style: once you have written the content of your document, its appearance can be changed with ease. Similarly, you can create a <span class="texhtml" style="font-family:'CMU Serif', cmr10, LMRoman10-Regular, 'Times New Roman', 'Nimbus Roman No9 L', Times, serif">L<span style="text-transform:uppercase;font-size:70%;margin-left:-0.36em;vertical-align:0.3em;line-height:0;margin-right:-0.15em">a</span>T<span style="text-transform:uppercase;margin-left:-0.1667em;vertical-align:-0.5ex;line-height:0;margin-right:-0.125em">e</span>X</span> file which defines the layout/style of a particular document type and that file can be used as a <em>template</em> to standardise authorship/production of additional documents of that type; for example, this allows scientific publishers to create article templates, in <span class="texhtml" style="font-family:'CMU Serif', cmr10, LMRoman10-Regular, 'Times New Roman', 'Nimbus Roman No9 L', Times, serif">L<span style="text-transform:uppercase;font-size:70%;margin-left:-0.36em;vertical-align:0.3em;line-height:0;margin-right:-0.15em">a</span>T<span style="text-transform:uppercase;margin-left:-0.1667em;vertical-align:-0.5ex;line-height:0;margin-right:-0.125em">e</span>X</span>, which authors use to write papers for submission to journals. Overleaf has a <a rel="nofollow" class="external text" href="https://www.overleaf.com/gallery">gallery containing thousands of templates</a>, covering an enormous range of document types—everything from scientific articles, reports and books to CVs and presentations. Because these templates define the layout and style of the document, authors need only to open them in Overleaf—creating a new project—and commence writing to add their content.
+</p>
+<h2><span class="mw-headline" id="Writing_your_first_piece_of_LaTeX">Writing your first piece of <span class="texhtml" style="font-family:'CMU Serif', cmr10, LMRoman10-Regular, 'Times New Roman', 'Nimbus Roman No9 L', Times, serif">L<span style="text-transform:uppercase;font-size:70%;margin-left:-0.36em;vertical-align:0.3em;line-height:0;margin-right:-0.15em">a</span>T<span style="text-transform:uppercase;margin-left:-0.1667em;vertical-align:-0.5ex;line-height:0;margin-right:-0.125em">e</span>X</span></span></h2>
+<p>The first step is to create a new <span class="texhtml" style="font-family:'CMU Serif', cmr10, LMRoman10-Regular, 'Times New Roman', 'Nimbus Roman No9 L', Times, serif">L<span style="text-transform:uppercase;font-size:70%;margin-left:-0.36em;vertical-align:0.3em;line-height:0;margin-right:-0.15em">a</span>T<span style="text-transform:uppercase;margin-left:-0.1667em;vertical-align:-0.5ex;line-height:0;margin-right:-0.125em">e</span>X</span> project. You can do this on your own computer by creating a new <code>.tex</code> file; alternatively, you can <a href="/learn/latex/Creating_a_document_in_Overleaf" class="mw-redirect" title="Creating a document in Overleaf">start a new project in Overleaf</a>.
+</p><p>Let’s start with the simplest working example, which can be opened directly in Overleaf:
+</p>
+<p class="mw-empty-elt"></p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\documentclass</span><span class="nb">{</span>article<span class="nb">}</span>
+<span class="k">\begin</span><span class="nb">{</span>document<span class="nb">}</span>
+First document. This is a simple example, with no 
+extra parameters or packages included.
+<span class="k">\end</span><span class="nb">{</span>document<span class="nb">}</span>
+</pre></div>
+</div>
+</div>
+
+<p><a class="open-in-overleaf" target="_blank" href="https://www.overleaf.com/docs?engine=pdflatex
+&amp;snip_name=Simplest+working+example+LaTeX+document
+&amp;snip=%5Cdocumentclass%7Barticle%7D%0A%5Cbegin%7Bdocument%7D%0AFirst+document.+This+is+a+simple+example%2C+with+no+%0Aextra+parameters+or+packages+included.%0A%5Cend%7Bdocument%7D"><i class="fa fa-share"></i> Open this example in Overleaf.</a>
+</p><p class="mw-empty-elt"></p>
+<p>This example produces the following output:
+
+</p><div class="example"><div class="output">
+<img src="https://images.ctfassets.net/nrgyaltdicpt/5oBbZABsWEnHZpwhfvV2PD/95ba7d5496616b4f10dffe6fb90f578a/LL30Fig1-plain.svg" alt="Example document" style="width:100%;padding:20px" /> 
+</div></div>
+
+<p class="mw-empty-elt"></p><p>You can see that <span class="texhtml" style="font-family:'CMU Serif', cmr10, LMRoman10-Regular, 'Times New Roman', 'Nimbus Roman No9 L', Times, serif">L<span style="text-transform:uppercase;font-size:70%;margin-left:-0.36em;vertical-align:0.3em;line-height:0;margin-right:-0.15em">a</span>T<span style="text-transform:uppercase;margin-left:-0.1667em;vertical-align:-0.5ex;line-height:0;margin-right:-0.125em">e</span>X</span> has automatically indented the first line of the paragraph, taking care of that formatting for you. Let’s have a closer look at what each part of our code does.
+</p><p>The first line of code, <code>\documentclass{article}</code>, declares the document type known as its <em>class</em>, which controls the overall appearance of the document. Different types of documents require different classes; i.e., a CV/resume will require a different class than a scientific paper which might use the standard <span class="texhtml" style="font-family:'CMU Serif', cmr10, LMRoman10-Regular, 'Times New Roman', 'Nimbus Roman No9 L', Times, serif">L<span style="text-transform:uppercase;font-size:70%;margin-left:-0.36em;vertical-align:0.3em;line-height:0;margin-right:-0.15em">a</span>T<span style="text-transform:uppercase;margin-left:-0.1667em;vertical-align:-0.5ex;line-height:0;margin-right:-0.125em">e</span>X</span> <code>article</code> class. Other types of documents you may be working on may require different classes such as <code>book</code> or <code>report</code>. To get some idea of the many <span class="texhtml" style="font-family:'CMU Serif', cmr10, LMRoman10-Regular, 'Times New Roman', 'Nimbus Roman No9 L', Times, serif">L<span style="text-transform:uppercase;font-size:70%;margin-left:-0.36em;vertical-align:0.3em;line-height:0;margin-right:-0.15em">a</span>T<span style="text-transform:uppercase;margin-left:-0.1667em;vertical-align:-0.5ex;line-height:0;margin-right:-0.125em">e</span>X</span> class types available,  <a rel="nofollow" class="external text" href="https://www.ctan.org/topic/class">visit the relevant page on CTAN (Comprehensive TeX Archive Network)</a>.
+</p><p>Having set the document class, our content, known as the <em>body</em> of the document, is written between the <code>\begin{document}</code> and <code>\end{document}</code> tags. After opening the example above, you can make changes to the text and, when finished, view the resulting typeset PDF by <em>recompiling the document</em>. To do this in Overleaf, simply hit <strong>Recompile</strong>, as demonstrated in this brief video clip:
+</p><p class="mw-empty-elt">
+</p><div style="max-width:800px">
+<video controls width="100%" height="100%" src="https://videos.ctfassets.net/nrgyaltdicpt/6yo2PA5aMV3OEZl5NtZKWu/54395f569b830b8183b5e0058d5bc0cc/LL30recompile.mp4" type="video/mp4">
+</video>
+</div>
+
+<p class="mw-empty-elt"></p><p>Any Overleaf project can be configured to recompile automatically each time it is edited: click the small arrow next to the <strong>Recompile</strong> button and set <strong>Auto Compile</strong> to <strong>On</strong>, as shown in the following screengrab:
+</p><p><img alt="Screengrab showing how to set Auto Compile to On or Off" src="https://sharelatex-wiki-cdn-671420.c.cdn77.org/learn-scripts/images/7/77/LL30autocompile.png" decoding="async" width="600" height="274" />
+</p><p>Having seen how to add content to our document, the next step is to give it a title. To do this, we must talk briefly about the <strong>preamble</strong>.
+</p>
+<h2><span class="mw-headline" id="The_preamble_of_a_document">The preamble of a document</span></h2>
+<p>The screengrab above shows Overleaf storing a <span class="texhtml" style="font-family:'CMU Serif', cmr10, LMRoman10-Regular, 'Times New Roman', 'Nimbus Roman No9 L', Times, serif">L<span style="text-transform:uppercase;font-size:70%;margin-left:-0.36em;vertical-align:0.3em;line-height:0;margin-right:-0.15em">a</span>T<span style="text-transform:uppercase;margin-left:-0.1667em;vertical-align:-0.5ex;line-height:0;margin-right:-0.125em">e</span>X</span> document as a file called <code>main.tex</code>: the <code>.tex</code> file extension is, by convention, used when naming files containing your document’s LaTeX code. 
+</p><p>The previous example showed how document content was entered after the <code>\begin{document}</code> command; however, everything in your <code>.tex</code> file appearing <em>before</em> that point is called the <em>preamble</em>, which acts as the document’s “setup” section. Within the preamble you define the document class (type) together with specifics such as languages to be used when writing the document; loading <em>packages</em> you would like to use (more on this <a href="#Finding_and_using_LaTeX_packages">later</a>), and it is where you’d apply other types of configuration. 
+</p><p>A minimal document preamble might look like this:
+</p>
+<p class="mw-empty-elt">
+</p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\documentclass</span><span class="na">[12pt, letterpaper]</span><span class="nb">{</span>article<span class="nb">}</span>
+<span class="k">\usepackage</span><span class="nb">{</span>graphicx<span class="nb">}</span>
+</pre></div>
+</div>
+</div>
+<p class="mw-empty-elt"></p>
+<p>where <code>\documentclass[12pt, letterpaper]{article}</code> defines the overall class (type) of document. Additional parameters, which must be separated by commas, are included in square brackets (<code>[...]</code>) and used to configure this instance of the article class; i.e., settings we wish to use for this particular <code>article</code>-class-based document. 
+</p><p>In this example, the two parameters do the following: 
+</p>
+<ul><li><code>12pt</code> sets the font size</li>
+<li><code>letterpaper</code> sets the paper size</li></ul>
+<p>Of course other font sizes, <code>9pt</code>, <code>11pt</code>, <code>12pt</code>, can be used, but if none is specified, the default size is <code>10pt</code>. As for the paper size, other possible values are <code>a4paper</code> and <code>legalpaper</code>. For further information see the article about <a href="/learn/latex/Page_size_and_margins" title="Page size and margins">page size and margins</a>.
+</p><p>The preamble line 
+</p>
+<p class="mw-empty-elt">
+</p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\usepackage</span><span class="nb">{</span>graphicx<span class="nb">}</span>
+</pre></div>
+</div>
+</div>
+<p class="mw-empty-elt"></p>
+<p>is an example of loading an external package (here, <a rel="nofollow" class="external text" href="https://ctan.org/pkg/graphicx?lang=en"><code>graphicx</code></a>) to extend <span class="texhtml" style="font-family:'CMU Serif', cmr10, LMRoman10-Regular, 'Times New Roman', 'Nimbus Roman No9 L', Times, serif">L<span style="text-transform:uppercase;font-size:70%;margin-left:-0.36em;vertical-align:0.3em;line-height:0;margin-right:-0.15em">a</span>T<span style="text-transform:uppercase;margin-left:-0.1667em;vertical-align:-0.5ex;line-height:0;margin-right:-0.125em">e</span>X</span>’s capabilities, enabling it to import external graphics files. <span class="texhtml" style="font-family:'CMU Serif', cmr10, LMRoman10-Regular, 'Times New Roman', 'Nimbus Roman No9 L', Times, serif">L<span style="text-transform:uppercase;font-size:70%;margin-left:-0.36em;vertical-align:0.3em;line-height:0;margin-right:-0.15em">a</span>T<span style="text-transform:uppercase;margin-left:-0.1667em;vertical-align:-0.5ex;line-height:0;margin-right:-0.125em">e</span>X</span> packages are discussed in the section <a href="#Finding_and_using_LaTeX_packages">Finding and using <span class="texhtml" style="font-family:'CMU Serif', cmr10, LMRoman10-Regular, 'Times New Roman', 'Nimbus Roman No9 L', Times, serif">L<span style="text-transform:uppercase;font-size:70%;margin-left:-0.36em;vertical-align:0.3em;line-height:0;margin-right:-0.15em">a</span>T<span style="text-transform:uppercase;margin-left:-0.1667em;vertical-align:-0.5ex;line-height:0;margin-right:-0.125em">e</span>X</span> packages</a>.
+</p>
+<h2><span id="Including_title.2C_author_and_date_information"></span><span class="mw-headline" id="Including_title,_author_and_date_information">Including title, author and date information</span></h2>
+<p>Adding a title, author and date to our document requires three more lines in the <em>preamble</em> (<em>not</em> the main body of the document). Those lines are:
+</p>
+<ul><li><code>\title{My first LaTeX document}</code>: the document title</li>
+<li><code>\author{Hubert Farnsworth}</code>: here you write the name of the author(s) and, optionally, the <code>\thanks</code> command within the curly braces:
+<ul><li><code>\thanks{Funded by the Overleaf team.}</code>: can be added after the name of the author, inside the braces of the <code>author</code> command. It will add a superscript and a footnote with the text inside the braces. Useful if you need to thank an institution in your article.</li></ul></li>
+<li><code>\date{August 2022}</code>: you can enter the date manually or use the command <code>\today</code> to typeset the current date every time the document is compiled</li></ul>
+<p>With these lines added, your preamble should look something like this:
+</p>
+<p class="mw-empty-elt">
+</p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\documentclass</span><span class="na">[12pt, letterpaper]</span><span class="nb">{</span>article<span class="nb">}</span>
+<span class="k">\title</span><span class="nb">{</span>My first LaTeX document<span class="nb">}</span>
+<span class="k">\author</span><span class="nb">{</span>Hubert Farnsworth<span class="k">\thanks</span><span class="nb">{</span>Funded by the Overleaf team.<span class="nb">}}</span>
+<span class="k">\date</span><span class="nb">{</span>August 2022<span class="nb">}</span>
+</pre></div>
+</div>
+</div>
+<p class="mw-empty-elt"></p>
+<p>To typeset the title, author and date use the <code>\maketitle</code> command within the <em>body</em> of the document:
+</p>
+<p class="mw-empty-elt">
+</p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\begin</span><span class="nb">{</span>document<span class="nb">}</span>
+<span class="k">\maketitle</span>
+We have now added a title, author and date to our first <span class="k">\LaTeX</span><span class="nb">{}</span> document!
+<span class="k">\end</span><span class="nb">{</span>document<span class="nb">}</span>
+</pre></div>
+</div>
+</div>
+<p class="mw-empty-elt"></p>
+<p>The preamble and body can now be combined to produce a complete document which can be opened in Overleaf:
+</p>
+<p class="mw-empty-elt"></p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\documentclass</span><span class="na">[12pt, letterpaper]</span><span class="nb">{</span>article<span class="nb">}</span>
+<span class="k">\title</span><span class="nb">{</span>My first LaTeX document<span class="nb">}</span>
+<span class="k">\author</span><span class="nb">{</span>Hubert Farnsworth<span class="k">\thanks</span><span class="nb">{</span>Funded by the Overleaf team.<span class="nb">}}</span>
+<span class="k">\date</span><span class="nb">{</span>August 2022<span class="nb">}</span>
+<span class="k">\begin</span><span class="nb">{</span>document<span class="nb">}</span>
+<span class="k">\maketitle</span>
+We have now added a title, author and date to our first <span class="k">\LaTeX</span><span class="nb">{}</span> document!
+<span class="k">\end</span><span class="nb">{</span>document<span class="nb">}</span>
+</pre></div>
+</div>
+</div>
+
+<p><a class="open-in-overleaf" target="_blank" href="https://www.overleaf.com/docs?engine=pdflatex
+&amp;snip_name=My+first+LaTeX+document
+&amp;snip=%5Cdocumentclass%5B12pt%2C+letterpaper%5D%7Barticle%7D%0A%5Ctitle%7BMy+first+LaTeX+document%7D%0A%5Cauthor%7BHubert+Farnsworth%5Cthanks%7BFunded+by+the+Overleaf+team.%7D%7D%0A%5Cdate%7BAugust+2022%7D%0A%5Cbegin%7Bdocument%7D%0A%5Cmaketitle%0AWe+have+now+added+a+title%2C+author+and+date+to+our+first+%5CLaTeX%7B%7D+document%21%0A%5Cend%7Bdocument%7D"><i class="fa fa-share"></i> Open this example in Overleaf.</a>
+</p><p class="mw-empty-elt"></p>
+<p>This example produces the following output:
+
+</p><div class="example"><div class="output">
+<img src="https://images.ctfassets.net/nrgyaltdicpt/3WzMd0bx2zlj3zLTKS8SxT/dc2b7c16adbc96bdd750b6d2c8b4227e/LL30Fig2r-plain.svg" alt="Image of a simple document produced in LaTeX" style="width:100%;padding:20px" /> 
+</div></div>
+
+<p class="mw-empty-elt"></p>
+<h2><span class="mw-headline" id="Adding_comments">Adding comments</span></h2>
+<p>LaTeX is a form of “program code”, but one which specializes in document typesetting; consequently, as with code written in any other programming language, it can be very useful to include comments within your document. A <span class="texhtml" style="font-family:'CMU Serif', cmr10, LMRoman10-Regular, 'Times New Roman', 'Nimbus Roman No9 L', Times, serif">L<span style="text-transform:uppercase;font-size:70%;margin-left:-0.36em;vertical-align:0.3em;line-height:0;margin-right:-0.15em">a</span>T<span style="text-transform:uppercase;margin-left:-0.1667em;vertical-align:-0.5ex;line-height:0;margin-right:-0.125em">e</span>X</span> comment is a section of text that will not be typeset or affect the document in any way—often used to add “to do” notes; include explanatory notes; provide in-line explanations of tricky macros or comment-out lines/sections of LaTeX code when debugging. 
+</p><p>To make a comment in <span class="texhtml" style="font-family:'CMU Serif', cmr10, LMRoman10-Regular, 'Times New Roman', 'Nimbus Roman No9 L', Times, serif">L<span style="text-transform:uppercase;font-size:70%;margin-left:-0.36em;vertical-align:0.3em;line-height:0;margin-right:-0.15em">a</span>T<span style="text-transform:uppercase;margin-left:-0.1667em;vertical-align:-0.5ex;line-height:0;margin-right:-0.125em">e</span>X</span>, simply write a <code>%</code> symbol at the beginning of the line, as shown in the following code which uses the example above:
+</p>
+<p class="mw-empty-elt"></p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\documentclass</span><span class="na">[12pt, letterpaper]</span><span class="nb">{</span>article<span class="nb">}</span>
+<span class="k">\title</span><span class="nb">{</span>My first LaTeX document<span class="nb">}</span>
+<span class="k">\author</span><span class="nb">{</span>Hubert Farnsworth<span class="k">\thanks</span><span class="nb">{</span>Funded by the Overleaf team.<span class="nb">}}</span>
+<span class="k">\date</span><span class="nb">{</span>August 2022<span class="nb">}</span>
+<span class="k">\begin</span><span class="nb">{</span>document<span class="nb">}</span>
+<span class="k">\maketitle</span>
+We have now added a title, author and date to our first <span class="k">\LaTeX</span><span class="nb">{}</span> document!
+
+<span class="c">% This line here is a comment. It will not be typeset in the document.</span>
+<span class="k">\end</span><span class="nb">{</span>document<span class="nb">}</span>
+</pre></div>
+</div>
+</div>
+
+<p><a class="open-in-overleaf" target="_blank" href="https://www.overleaf.com/docs?engine=pdflatex
+&amp;snip_name=My+first+LaTeX+document+with+a+comment
+&amp;snip=%5Cdocumentclass%5B12pt%2C+letterpaper%5D%7Barticle%7D%0A%5Ctitle%7BMy+first+LaTeX+document%7D%0A%5Cauthor%7BHubert+Farnsworth%5Cthanks%7BFunded+by+the+Overleaf+team.%7D%7D%0A%5Cdate%7BAugust+2022%7D%0A%5Cbegin%7Bdocument%7D%0A%5Cmaketitle%0AWe+have+now+added+a+title%2C+author+and+date+to+our+first+%5CLaTeX%7B%7D+document%21%0A%0A%25+This+line+here+is+a+comment.+It+will+not+be+typeset+in+the+document.%0A%5Cend%7Bdocument%7D"><i class="fa fa-share"></i> Open this example in Overleaf.</a>
+</p><p class="mw-empty-elt"></p>
+<p>This example produces output that is identical to the previous LaTeX code which did not contain the comment.
+</p>
+<h2><span id="Bold.2C_italics_and_underlining"></span><span class="mw-headline" id="Bold,_italics_and_underlining">Bold, italics and underlining</span></h2>
+<p>Next, we will now look at some text formatting commands:
+</p>
+<ul><li><b>Bold</b>: bold text in LaTeX is typeset using the <code>\textbf{...}</code> command.</li>
+<li><i>Italics</i>: italicised text is produced using the <code>\textit{...}</code> command.</li>
+<li><u>Underline</u>: to underline text use the <code>\underline{...}</code> command.</li></ul>
+<p>The next example demonstrates these commands:
+</p>
+<p class="mw-empty-elt"></p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span>Some of the <span class="k">\textbf</span><span class="nb">{</span>greatest<span class="nb">}</span>
+discoveries in <span class="k">\underline</span><span class="nb">{</span>science<span class="nb">}</span> 
+were made by <span class="k">\textbf</span><span class="nb">{</span><span class="k">\textit</span><span class="nb">{</span>accident<span class="nb">}}</span>.
+</pre></div>
+</div>
+</div>
+
+<p><a class="open-in-overleaf" target="_blank" href="https://www.overleaf.com/docs?engine=pdflatex
+&amp;snip_name=First+example+with+formatted+text
+&amp;snip=%5Cdocumentclass%5B12pt%2C+letterpaper%5D%7Barticle%7D%0A%5Ctitle%7BMy+first+LaTeX+document%7D%0A%5Cauthor%7BHubert+Farnsworth%5Cthanks%7BFunded+by+the+Overleaf+team.%7D%7D%0A%5Cdate%7BAugust+2022%7D%0A%5Cbegin%7Bdocument%7D%0A%5Cmaketitle%0ASome+of+the+%5Ctextbf%7Bgreatest%7D%0Adiscoveries+in+%5Cunderline%7Bscience%7D+%0Awere+made+by+%5Ctextbf%7B%5Ctextit%7Baccident%7D%7D.%0A%5Cend%7Bdocument%7D"><i class="fa fa-share"></i> Open this example in Overleaf.</a>
+</p><p class="mw-empty-elt"></p>
+<p>This example produces the following output:
+
+</p><div class="example"><div class="output">
+<img src="https://images.ctfassets.net/nrgyaltdicpt/6vo15r0tLCByTpcvn1w2E8/8f14edc7ece1f10ce4ba2c76e1e58a56/LL30Fig3r-plain.svg" alt="Imate showing text formatted in a LaTeX document" style="width:100%;padding:20px" /> 
+</div></div>
+
+<p class="mw-empty-elt"></p><p>Another very useful command is <code>\emph{<em>argument</em>}</code>, whose effect on its <code><em>argument</em></code> depends on the context. Inside normal text, the emphasized text is italicized, but this behaviour is reversed if used inside an italicized text—see the next example:
+</p>
+<p class="mw-empty-elt"></p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span>Some of the greatest <span class="k">\emph</span><span class="nb">{</span>discoveries<span class="nb">}</span> in science 
+were made by accident.
+
+<span class="k">\textit</span><span class="nb">{</span>Some of the greatest <span class="k">\emph</span><span class="nb">{</span>discoveries<span class="nb">}</span> 
+in science were made by accident.<span class="nb">}</span>
+
+<span class="k">\textbf</span><span class="nb">{</span>Some of the greatest <span class="k">\emph</span><span class="nb">{</span>discoveries<span class="nb">}</span> 
+in science were made by accident.<span class="nb">}</span>
+</pre></div>
+</div>
+</div>
+
+<p><a class="open-in-overleaf" target="_blank" href="https://www.overleaf.com/docs?engine=pdflatex
+&amp;snip_name=Using+the+emph+command
+&amp;snip=%5Cdocumentclass%5B12pt%2C+letterpaper%2C+twoside%5D%7Barticle%7D%0A%5Ctitle%7BMy+first+LaTeX+document%7D%0A%5Cauthor%7BHubert+Farnsworth%5Cthanks%7BFunded+by+the+Overleaf+team.%7D%7D%0A%5Cdate%7BAugust+2022%7D%0A%5Cbegin%7Bdocument%7D%0A%5Cparindent0pt%25+To+remove+the+paragraph+indentation%0A%5Cmaketitle%0ASome+of+the+greatest+%5Cemph%7Bdiscoveries%7D+in+science+%0Awere+made+by+accident.%0A%0A%5Ctextit%7BSome+of+the+greatest+%5Cemph%7Bdiscoveries%7D+%0Ain+science+were+made+by+accident.%7D%0A%0A%5Ctextbf%7BSome+of+the+greatest+%5Cemph%7Bdiscoveries%7D+%0Ain+science+were+made+by+accident.%7D%0A%5Cend%7Bdocument%7D"><i class="fa fa-share"></i> Open this <code><strong>\emph</strong></code> example in Overleaf.</a>
+</p><p class="mw-empty-elt"></p>
+<p>This example produces the following output:
+
+</p><div class="example"><div class="output">
+<img src="https://images.ctfassets.net/nrgyaltdicpt/1K0A8RXXOomakJBAr2usmp/62d0e8b5275092dd0b1b4a59c745b632/LL30Fig4r-plain.svg" alt="Image demonstrating use of the LaTeX \emph command" style="width:100%;padding:20px" /> 
+</div></div>
+
+<p class="mw-empty-elt"></p>
+<ul><li><strong>Note:</strong> some packages, such as <a href="/learn/latex/Beamer" title="Beamer">Beamer</a>, change the behaviour of the <code>\emph</code> command.</li></ul>
+<h2><span class="mw-headline" id="Adding_images">Adding images</span></h2>
+<p>In this section we will look at how to add images to a <span class="texhtml" style="font-family:'CMU Serif', cmr10, LMRoman10-Regular, 'Times New Roman', 'Nimbus Roman No9 L', Times, serif">L<span style="text-transform:uppercase;font-size:70%;margin-left:-0.36em;vertical-align:0.3em;line-height:0;margin-right:-0.15em">a</span>T<span style="text-transform:uppercase;margin-left:-0.1667em;vertical-align:-0.5ex;line-height:0;margin-right:-0.125em">e</span>X</span> document. Overleaf supports three ways to insert images:
+</p>
+<ol>
+<li>Use the <a rel="nofollow" class="external text" href="https://learn.overleaf.com/learn/Kb/How_to_insert_figures_in_Overleaf#Using_Insert_Figure_to_add_a_figure_to_your_project"><strong>Insert Figure</strong> button</a>(<img alt="The Insert Figure button on the editor toolbar" src="https://sharelatex-wiki-cdn-671420.c.cdn77.org/learn-scripts/images/a/a8/InsertFigureButton.png" decoding="async" width="24" height="20" />), located on the editor toolbar, to insert an image into <strong>Visual Editor</strong> or <strong>Code Editor</strong>.</li>
+<li><a href="/learn/how-to/How_to_paste_formatted_content_into_Overleaf%23Pasting_images_into_your_Overleaf_project" title="How to paste formatted content into Overleaf">Copy and paste an image</a> into <strong>Visual Editor</strong> or <strong>Code Editor</strong>.</li>
+<li>Use <b>Code Editor</b> to write LaTeX code that inserts a graphic.</li>
+</ol>
+<p>Options 1 and 2 automatically generate the LaTeX code required to insert images, but here we introduce option 3—note that you will need to <a href="https://docs.overleaf.com/writing-and-editing/inserting-images" title="Including images on Overleaf">upload those images</a> to your Overleaf project.
+
+The following example demonstrates how to include a picture:
+</p><p class="mw-empty-elt">
+</p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\documentclass</span><span class="nb">{</span>article<span class="nb">}</span>
+<span class="k">\usepackage</span><span class="nb">{</span>graphicx<span class="nb">}</span> <span class="c">%LaTeX package to import graphics</span>
+<span class="k">\graphicspath</span><span class="nb">{{</span>images/<span class="nb">}}</span> <span class="c">%configuring the graphicx package</span>
+ 
+<span class="k">\begin</span><span class="nb">{</span>document<span class="nb">}</span>
+The universe is immense and it seems to be homogeneous, 
+on a large scale, everywhere we look.
+
+<span class="c">% The \includegraphics command is </span>
+<span class="c">% provided (implemented) by the </span>
+<span class="c">% graphicx package</span>
+<span class="k">\includegraphics</span><span class="nb">{</span>universe<span class="nb">}</span>  
+ 
+There's a picture of a galaxy above.
+<span class="k">\end</span><span class="nb">{</span>document<span class="nb">}</span>
+</pre></div>
+</div>
+</div>
+<p class="mw-empty-elt"></p><p><a class="open-in-overleaf" target="_blank" href="https://www.overleaf.com/project/new/template/25686?id=107971142&amp;templateName=Example+using+images+in+LaTeX&amp;latexEngine=pdflatex&amp;texImage=texlive-full%3A2022.1&amp;mainFile="><i class="fa fa-share"></i> Open this image example in Overleaf.</a>
+</p><p>This example produces the following output:
+
+</p><div class="example"><div class="output">
+<img src="https://images.ctfassets.net/nrgyaltdicpt/4p5toat08FUgehv4yuNwXS/efc9e75e4342c9caeec94f26627fa337/LL30Fig5v2-plain.svg" alt="Graphic showing an image imported into a LaTeX document" style="width:100%;padding:20px" /> 
+</div></div>
+
+<p class="mw-empty-elt"></p><p>Importing graphics into a <span class="texhtml" style="font-family:'CMU Serif', cmr10, LMRoman10-Regular, 'Times New Roman', 'Nimbus Roman No9 L', Times, serif">L<span style="text-transform:uppercase;font-size:70%;margin-left:-0.36em;vertical-align:0.3em;line-height:0;margin-right:-0.15em">a</span>T<span style="text-transform:uppercase;margin-left:-0.1667em;vertical-align:-0.5ex;line-height:0;margin-right:-0.125em">e</span>X</span> document needs <a href="#Finding_and_using_LaTeX_packages">an add-on <em>package</em></a> which provides the commands and features required to include external graphics files. The above example loads the  <a rel="nofollow" class="external text" href="https://ctan.org/pkg/graphicx?lang=en"><code>graphicx</code> package</a> which, among many other commands, provides <code>\includegraphics{...}</code> to import graphics and <code>\graphicspath{...}</code> to advise <span class="texhtml" style="font-family:'CMU Serif', cmr10, LMRoman10-Regular, 'Times New Roman', 'Nimbus Roman No9 L', Times, serif">L<span style="text-transform:uppercase;font-size:70%;margin-left:-0.36em;vertical-align:0.3em;line-height:0;margin-right:-0.15em">a</span>T<span style="text-transform:uppercase;margin-left:-0.1667em;vertical-align:-0.5ex;line-height:0;margin-right:-0.125em">e</span>X</span> where the graphics are located.
+</p><p>To use the <code>graphicx</code> package, include the following line in your Overleaf document preamble:
+</p>
+<p class="mw-empty-elt">
+</p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\usepackage</span><span class="nb">{</span>graphicx<span class="nb">}</span>
+</pre></div>
+</div>
+</div>
+<p class="mw-empty-elt"></p>
+<p>In our example the command <code>\graphicspath{{images/}}</code> informs <span class="texhtml" style="font-family:'CMU Serif', cmr10, LMRoman10-Regular, 'Times New Roman', 'Nimbus Roman No9 L', Times, serif">L<span style="text-transform:uppercase;font-size:70%;margin-left:-0.36em;vertical-align:0.3em;line-height:0;margin-right:-0.15em">a</span>T<span style="text-transform:uppercase;margin-left:-0.1667em;vertical-align:-0.5ex;line-height:0;margin-right:-0.125em">e</span>X</span> that images are kept in a folder named <code>images</code>, which is contained in the current directory:
+</p><p><img alt="Image showing LaTeX accessing images stored in a folder" src="https://sharelatex-wiki-cdn-671420.c.cdn77.org/learn-scripts/images/1/17/ImagesInAFolder.png" decoding="async" width="600" height="342" />
+</p><p>The <code>\includegraphics{universe}</code> command does the actual work of inserting the image in the document. Here, <code>universe</code> is the name of the image file but without its extension. 
+</p><p><strong>Note</strong>:
+</p>
+<ul><li>Although the full file name, including its extension, is allowed in the <code>\includegraphics</code> command, it’s considered best practice to omit the file extension because it will prompt <span class="texhtml" style="font-family:'CMU Serif', cmr10, LMRoman10-Regular, 'Times New Roman', 'Nimbus Roman No9 L', Times, serif">L<span style="text-transform:uppercase;font-size:70%;margin-left:-0.36em;vertical-align:0.3em;line-height:0;margin-right:-0.15em">a</span>T<span style="text-transform:uppercase;margin-left:-0.1667em;vertical-align:-0.5ex;line-height:0;margin-right:-0.125em">e</span>X</span> to search for all the supported formats.</li>
+<li>Generally, the graphic’s file name should not contain white spaces or multiple dots; it is also recommended to use lowercase letters for the file extension when uploading image files to Overleaf.</li></ul>
+<p>More information on <span class="texhtml" style="font-family:'CMU Serif', cmr10, LMRoman10-Regular, 'Times New Roman', 'Nimbus Roman No9 L', Times, serif">L<span style="text-transform:uppercase;font-size:70%;margin-left:-0.36em;vertical-align:0.3em;line-height:0;margin-right:-0.15em">a</span>T<span style="text-transform:uppercase;margin-left:-0.1667em;vertical-align:-0.5ex;line-height:0;margin-right:-0.125em">e</span>X</span> packages can be found at the end of this tutorial in the section <a href="#Finding_and_using_LaTeX_packages">Finding and using LaTeX packages</a>.
+</p>
+<h2><span id="Captions.2C_labels_and_references"></span><span class="mw-headline" id="Captions,_labels_and_references">Captions, labels and references</span></h2>
+<p>Images can be captioned, labelled and referenced by means of the <code>figure</code> environment, as shown below:
+</p>
+<p class="mw-empty-elt">
+</p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\documentclass</span><span class="nb">{</span>article<span class="nb">}</span>
+<span class="k">\usepackage</span><span class="nb">{</span>graphicx<span class="nb">}</span>
+<span class="k">\graphicspath</span><span class="nb">{{</span>images/<span class="nb">}}</span>
+ 
+<span class="k">\begin</span><span class="nb">{</span>document<span class="nb">}</span>
+
+<span class="k">\begin</span><span class="nb">{</span>figure<span class="nb">}</span>[h]
+    <span class="k">\centering</span>
+    <span class="k">\includegraphics</span><span class="na">[width=0.75\textwidth]</span><span class="nb">{</span>mesh<span class="nb">}</span>
+    <span class="k">\caption</span><span class="nb">{</span>A nice plot.<span class="nb">}</span>
+    <span class="k">\label</span><span class="nb">{</span>fig:mesh1<span class="nb">}</span>
+<span class="k">\end</span><span class="nb">{</span>figure<span class="nb">}</span>
+ 
+As you can see in figure <span class="k">\ref</span><span class="nb">{</span>fig:mesh1<span class="nb">}</span>, the function grows near the origin. This example is on page <span class="k">\pageref</span><span class="nb">{</span>fig:mesh1<span class="nb">}</span>.
+
+<span class="k">\end</span><span class="nb">{</span>document<span class="nb">}</span>
+</pre></div>
+</div>
+</div>
+<p class="mw-empty-elt"></p><p><a class="open-in-overleaf" target="_blank" href="https://www.overleaf.com/project/new/template/25519?id=107980830&amp;templateName=Example+using+image+captions+in+LaTeX&amp;latexEngine=pdflatex&amp;texImage=texlive-full%3A2022.1&amp;mainFile="><i class="fa fa-share"></i> Open this image example in Overleaf.</a>
+</p><p>This example produces the following output:
+
+</p><div class="example"><div class="output">
+<img src="https://images.ctfassets.net/nrgyaltdicpt/4DkAWWkQqZP6QHU2EErogQ/9aa2371f2cde0f3f8bf22aa1c0b91789/LL30Fig6r-plain.svg" alt="Graphic showing use of figure captions in LaTeX" style="width:100%;padding:20px" /> 
+</div></div>
+
+<p class="mw-empty-elt"></p><p>There are several noteworthy commands in the example:
+</p>
+<ul><li><b><code>\includegraphics[width=0.75\textwidth]{mesh}</code></b>: This form of <code>\includegraphics</code> instructs <span class="texhtml" style="font-family:'CMU Serif', cmr10, LMRoman10-Regular, 'Times New Roman', 'Nimbus Roman No9 L', Times, serif">L<span style="text-transform:uppercase;font-size:70%;margin-left:-0.36em;vertical-align:0.3em;line-height:0;margin-right:-0.15em">a</span>T<span style="text-transform:uppercase;margin-left:-0.1667em;vertical-align:-0.5ex;line-height:0;margin-right:-0.125em">e</span>X</span> to set the figure’s width to 75% of the text width—whose value is stored in the <code>\textwidth</code> command.</li></ul>
+<ul><li><b><code>\caption{A nice plot.}</code></b>: As its name suggests, this command sets the figure caption which can be placed above or below the figure. If you create a list of figures this caption will be used in that list.</li></ul>
+<ul><li><b><code>\label{fig:mesh1}</code></b>: To reference this image within your document you give it a label using the <code>\label</code> command. The label is used to generate a number for the image and, combined with the next command, will allow you to reference it.</li></ul>
+<ul><li><b><code>\ref{fig:mesh1}</code></b>: This code will be substituted by the number corresponding to the referenced figure.</li></ul>
+<p>Images incorporated in a <span class="texhtml" style="font-family:'CMU Serif', cmr10, LMRoman10-Regular, 'Times New Roman', 'Nimbus Roman No9 L', Times, serif">L<span style="text-transform:uppercase;font-size:70%;margin-left:-0.36em;vertical-align:0.3em;line-height:0;margin-right:-0.15em">a</span>T<span style="text-transform:uppercase;margin-left:-0.1667em;vertical-align:-0.5ex;line-height:0;margin-right:-0.125em">e</span>X</span> document should be placed inside a <code>figure</code> environment, or similar, so that <span class="texhtml" style="font-family:'CMU Serif', cmr10, LMRoman10-Regular, 'Times New Roman', 'Nimbus Roman No9 L', Times, serif">L<span style="text-transform:uppercase;font-size:70%;margin-left:-0.36em;vertical-align:0.3em;line-height:0;margin-right:-0.15em">a</span>T<span style="text-transform:uppercase;margin-left:-0.1667em;vertical-align:-0.5ex;line-height:0;margin-right:-0.125em">e</span>X</span> can automatically position the image at a suitable location in your document.
+</p><p>Further guidance is contained in the following Overleaf help articles:
+</p>
+<ul><li><a href="/learn/latex/Positioning_of_Figures" class="mw-redirect" title="Positioning of Figures">Positioning of Figures</a></li>
+<li><a href="https://docs.overleaf.com/writing-and-editing/inserting-images" title="Inserting Images">Inserting Images</a></li></ul>
+<h2><span class="mw-headline" id="Creating_lists_in_LaTeX">Creating lists in <span class="texhtml" style="font-family:'CMU Serif', cmr10, LMRoman10-Regular, 'Times New Roman', 'Nimbus Roman No9 L', Times, serif">L<span style="text-transform:uppercase;font-size:70%;margin-left:-0.36em;vertical-align:0.3em;line-height:0;margin-right:-0.15em">a</span>T<span style="text-transform:uppercase;margin-left:-0.1667em;vertical-align:-0.5ex;line-height:0;margin-right:-0.125em">e</span>X</span></span></h2>
+<p>You can create different types of list using <em>environments</em>, which are used to encapsulate the <span class="texhtml" style="font-family:'CMU Serif', cmr10, LMRoman10-Regular, 'Times New Roman', 'Nimbus Roman No9 L', Times, serif">L<span style="text-transform:uppercase;font-size:70%;margin-left:-0.36em;vertical-align:0.3em;line-height:0;margin-right:-0.15em">a</span>T<span style="text-transform:uppercase;margin-left:-0.1667em;vertical-align:-0.5ex;line-height:0;margin-right:-0.125em">e</span>X</span> code required to implement a specific typesetting feature. An environment starts with <code>\begin{<em>environment-name</em>}</code> and ends with <code>\end{<em>environment-name</em>}</code> where <code><em>environment-name</em></code> might be <code>figure</code>, <code>tabular</code> or one of the list types: <code>itemize</code> for unordered lists or <code>enumerate</code> for ordered lists.
+</p>
+<h3><span class="mw-headline" id="Unordered_lists">Unordered lists</span></h3>
+<p>Unordered lists are produced by the <code>itemize</code> environment. Each list entry must be preceded by the <code>\item</code> command,  as shown below: 
+</p>
+<p class="mw-empty-elt"></p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\documentclass</span><span class="nb">{</span>article<span class="nb">}</span>
+<span class="k">\begin</span><span class="nb">{</span>document<span class="nb">}</span>
+<span class="k">\begin</span><span class="nb">{</span>itemize<span class="nb">}</span>
+  <span class="k">\item</span> The individual entries are indicated with a black dot, a so-called bullet.
+  <span class="k">\item</span> The text in the entries may be of any length.
+<span class="k">\end</span><span class="nb">{</span>itemize<span class="nb">}</span>
+<span class="k">\end</span><span class="nb">{</span>document<span class="nb">}</span>
+</pre></div>
+</div>
+</div>
+
+<p><a class="open-in-overleaf" target="_blank" href="https://www.overleaf.com/docs?engine=pdflatex
+&amp;snip_name=Example+of+a+LaTeX+unordered+list
+&amp;snip=%5Cdocumentclass%7Barticle%7D%0A%5Cbegin%7Bdocument%7D%0A%5Cbegin%7Bitemize%7D%0A++%5Citem+The+individual+entries+are+indicated+with+a+black+dot%2C+a+so-called+bullet.%0A++%5Citem+The+text+in+the+entries+may+be+of+any+length.%0A%5Cend%7Bitemize%7D%0A%5Cend%7Bdocument%7D"><i class="fa fa-share"></i> Open this example in Overleaf.</a>
+</p><p class="mw-empty-elt"></p>
+<p>This example produces the following output:
+
+</p><div class="example"><div class="output">
+<img src="https://images.ctfassets.net/nrgyaltdicpt/1lDj29Mg9ZuLNHXwZrTJew/cd7d950c65fd05b251c4aa55746f4eb7/LL30Fig7-plain.svg" alt="An example of bulleted lists in LaTeX" style="width:100%;padding:20px" /> 
+</div></div>
+
+<p class="mw-empty-elt"></p>
+<p>You can also open this <a class="open-in-overleaf" target="_blank" href="https://www.overleaf.com/project/new/template/25521?id=107987258&amp;templateName=Demonstrating+various+types+of+LaTeX+list&amp;latexEngine=pdflatex&amp;texImage=texlive-full%3A2022.1&amp;mainFile="><i class="fa fa-share"></i> larger Overleaf project</a>
+ which demonstrates various types of <span class="texhtml" style="font-family:'CMU Serif', cmr10, LMRoman10-Regular, 'Times New Roman', 'Nimbus Roman No9 L', Times, serif">L<span style="text-transform:uppercase;font-size:70%;margin-left:-0.36em;vertical-align:0.3em;line-height:0;margin-right:-0.15em">a</span>T<span style="text-transform:uppercase;margin-left:-0.1667em;vertical-align:-0.5ex;line-height:0;margin-right:-0.125em">e</span>X</span> list.</p>
+<h3><span class="mw-headline" id="Ordered_lists">Ordered lists</span></h3>
+<p>Ordered lists use the same syntax as unordered lists but are created using the <code>enumerate</code> environment:
+</p>
+<p class="mw-empty-elt"></p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\documentclass</span><span class="nb">{</span>article<span class="nb">}</span>
+<span class="k">\begin</span><span class="nb">{</span>document<span class="nb">}</span>
+<span class="k">\begin</span><span class="nb">{</span>enumerate<span class="nb">}</span>
+  <span class="k">\item</span> This is the first entry in our list.
+  <span class="k">\item</span> The list numbers increase with each entry we add.
+<span class="k">\end</span><span class="nb">{</span>enumerate<span class="nb">}</span>
+<span class="k">\end</span><span class="nb">{</span>document<span class="nb">}</span>
+</pre></div>
+</div>
+</div>
+
+<p><a class="open-in-overleaf" target="_blank" href="https://www.overleaf.com/docs?engine=pdflatex
+&amp;snip_name=Example+of+the+enumerate+environment
+&amp;snip=%5Cdocumentclass%7Barticle%7D%0A%5Cbegin%7Bdocument%7D%0A%5Cbegin%7Benumerate%7D%0A++%5Citem+This+is+the+first+entry+in+our+list.%0A++%5Citem+The+list+numbers+increase+with+each+entry+we+add.%0A%5Cend%7Benumerate%7D%0A%5Cend%7Bdocument%7D"><i class="fa fa-share"></i> Open this example in Overleaf.</a>
+</p><p class="mw-empty-elt"></p>
+<p>This example produces the following output:
+
+</p><div class="example"><div class="output">
+<img src="https://images.ctfassets.net/nrgyaltdicpt/2vkfa7RiAIJxv5wIZbg9UK/530c384f159d091a587de279d13fefec/LL30Fig8-plain.svg" alt="An example numbered list produced in LaTeX" style="width:75%;padding:20px" /> 
+</div></div>
+
+<p class="mw-empty-elt"></p><p>As with <code>unordered</code> lists, each entry must be preceded by the <code>\item</code> command which, here, automatically generates the numeric ordered-list label value, starting at 1.
+</p>
+<p>For further information you can open this <a class="open-in-overleaf" target="_blank" href="https://www.overleaf.com/project/new/template/25521?id=107987258&amp;templateName=Demonstrating+various+types+of+LaTeX+list&amp;latexEngine=pdflatex&amp;texImage=texlive-full%3A2022.1&amp;mainFile="><i class="fa fa-share"></i> larger Overleaf project</a>
+ which demonstrates various types of <span class="texhtml" style="font-family:'CMU Serif', cmr10, LMRoman10-Regular, 'Times New Roman', 'Nimbus Roman No9 L', Times, serif">L<span style="text-transform:uppercase;font-size:70%;margin-left:-0.36em;vertical-align:0.3em;line-height:0;margin-right:-0.15em">a</span>T<span style="text-transform:uppercase;margin-left:-0.1667em;vertical-align:-0.5ex;line-height:0;margin-right:-0.125em">e</span>X</span> list or visit our dedicated <a href="/learn/latex/Lists" title="Lists">help article on <span class="texhtml" style="font-family:'CMU Serif', cmr10, LMRoman10-Regular, 'Times New Roman', 'Nimbus Roman No9 L', Times, serif">L<span style="text-transform:uppercase;font-size:70%;margin-left:-0.36em;vertical-align:0.3em;line-height:0;margin-right:-0.15em">a</span>T<span style="text-transform:uppercase;margin-left:-0.1667em;vertical-align:-0.5ex;line-height:0;margin-right:-0.125em">e</span>X</span> lists</a>, which provides many more examples and shows how to create customized lists.</p>
+<h2><span class="mw-headline" id="Adding_math_to_LaTeX">Adding math to <span class="texhtml" style="font-family:'CMU Serif', cmr10, LMRoman10-Regular, 'Times New Roman', 'Nimbus Roman No9 L', Times, serif">L<span style="text-transform:uppercase;font-size:70%;margin-left:-0.36em;vertical-align:0.3em;line-height:0;margin-right:-0.15em">a</span>T<span style="text-transform:uppercase;margin-left:-0.1667em;vertical-align:-0.5ex;line-height:0;margin-right:-0.125em">e</span>X</span></span></h2>
+<p>One of the main advantages of <span class="texhtml" style="font-family:'CMU Serif', cmr10, LMRoman10-Regular, 'Times New Roman', 'Nimbus Roman No9 L', Times, serif">L<span style="text-transform:uppercase;font-size:70%;margin-left:-0.36em;vertical-align:0.3em;line-height:0;margin-right:-0.15em">a</span>T<span style="text-transform:uppercase;margin-left:-0.1667em;vertical-align:-0.5ex;line-height:0;margin-right:-0.125em">e</span>X</span> is the ease with which mathematical expressions can be written. <span class="texhtml" style="font-family:'CMU Serif', cmr10, LMRoman10-Regular, 'Times New Roman', 'Nimbus Roman No9 L', Times, serif">L<span style="text-transform:uppercase;font-size:70%;margin-left:-0.36em;vertical-align:0.3em;line-height:0;margin-right:-0.15em">a</span>T<span style="text-transform:uppercase;margin-left:-0.1667em;vertical-align:-0.5ex;line-height:0;margin-right:-0.125em">e</span>X</span> provides two writing modes for typesetting mathematics:
+</p>
+<ul><li><em>inline</em> math mode used for writing formulas that are part of a paragraph</li>
+<li><em>display</em> math mode used to write expressions that are not part of a text or paragraph and are typeset on separate lines</li></ul>
+<h3><span class="mw-headline" id="Inline_math_mode">Inline math mode</span></h3>
+<p>Let’s see an example of inline math mode:
+</p>
+<p class="mw-empty-elt"></p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\documentclass</span><span class="na">[12pt, letterpaper]</span><span class="nb">{</span>article<span class="nb">}</span>
+<span class="k">\begin</span><span class="nb">{</span>document<span class="nb">}</span>
+In physics, the mass-energy equivalence is stated 
+by the equation <span class="s">$</span><span class="nb">E</span><span class="o">=</span><span class="nb">mc^</span><span class="m">2</span><span class="s">$</span>, discovered in 1905 by Albert Einstein.
+<span class="k">\end</span><span class="nb">{</span>document<span class="nb">}</span>
+</pre></div>
+</div>
+</div>
+
+<p><a class="open-in-overleaf" target="_blank" href="https://www.overleaf.com/docs?engine=pdflatex
+&amp;snip_name=Inline+LaTeX+maths+example
+&amp;snip=%5Cdocumentclass%5B12pt%2C+letterpaper%5D%7Barticle%7D%0A%5Cbegin%7Bdocument%7D%0AIn+physics%2C+the+mass-energy+equivalence+is+stated+%0Aby+the+equation+%24E%3Dmc%5E2%24%2C+discovered+in+1905+by+Albert+Einstein.%0A%5Cend%7Bdocument%7D"><i class="fa fa-share"></i> Open this example in Overleaf.</a>
+</p><p class="mw-empty-elt"></p>
+<p>This example produces the following output:
+
+</p><div class="example"><div class="output">
+<img src="https://images.ctfassets.net/nrgyaltdicpt/77oK8pfew1B1VvxiBtALag/15714f2da4e469bbb8cf70a0d3733e5d/LL30Fig9-plain.svg" alt="Image showing math typeset in inline math mode" style="width:100%;padding:20px" /> 
+</div></div>
+
+<p class="mw-empty-elt"></p><p>To typeset inline-mode math you can use one of these delimiter pairs: <code>\( ... \)</code>, <code>$ ... $</code> or <code>\begin{math} ... \end{math}</code>, as demonstrated in the following example:
+</p>
+<p class="mw-empty-elt"></p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\documentclass</span><span class="na">[12pt, letterpaper]</span><span class="nb">{</span>article<span class="nb">}</span>
+<span class="k">\begin</span><span class="nb">{</span>document<span class="nb">}</span>
+<span class="k">\begin</span><span class="nb">{</span>math<span class="nb">}</span>
+E=mc<span class="nb">^</span>2
+<span class="k">\end</span><span class="nb">{</span>math<span class="nb">}</span> is typeset in a paragraph using inline math mode---as is <span class="s">$</span><span class="nb">E</span><span class="o">=</span><span class="nb">mc^</span><span class="m">2</span><span class="s">$</span>, and so too is <span class="s">\(</span><span class="nb">E</span><span class="o">=</span><span class="nb">mc^</span><span class="m">2</span><span class="s">\)</span>.
+<span class="k">\end</span><span class="nb">{</span>document<span class="nb">}</span>
+</pre></div>
+</div>
+</div>
+
+<p><a class="open-in-overleaf" target="_blank" href="https://www.overleaf.com/docs?engine=pdflatex
+&amp;snip_name=Demonstrating+inline+math+mode
+&amp;snip=%5Cdocumentclass%5B12pt%2C+letterpaper%5D%7Barticle%7D%0A%5Cbegin%7Bdocument%7D%0A%5Cbegin%7Bmath%7D%0AE%3Dmc%5E2%0A%5Cend%7Bmath%7D+is+typeset+in+a+paragraph+using+inline+math+mode---as+is+%24E%3Dmc%5E2%24%2C+and+so+too+is+%5C%28E%3Dmc%5E2%5C%29.%0A%5Cend%7Bdocument%7D"><i class="fa fa-share"></i> Open this example in Overleaf.</a>
+</p><p class="mw-empty-elt"></p>
+<p>This example produces the following output:
+
+</p><div class="example"><div class="output">
+<img src="https://images.ctfassets.net/nrgyaltdicpt/46VPfEGxYJ3di18TLzaLo9/ed67df07532c52b6543fd2bae7cb7c04/LL30Fig10r-plain.svg" alt="Image demonstrating content produced using LaTeX inline math mode" style="width:100%;padding:20px" /> 
+</div></div>
+
+<p class="mw-empty-elt"></p>
+<h3><span class="mw-headline" id="Display_math_mode">Display math mode</span></h3>
+<p>Equations typeset in display mode can be numbered or unnumbered, as in the following example:
+</p>
+<p class="mw-empty-elt"></p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\documentclass</span><span class="na">[12pt, letterpaper]</span><span class="nb">{</span>article<span class="nb">}</span>
+<span class="k">\begin</span><span class="nb">{</span>document<span class="nb">}</span>
+The mass-energy equivalence is described by the famous equation
+<span class="sb">\[</span><span class="nb"> E</span><span class="o">=</span><span class="nb">mc^</span><span class="m">2</span><span class="nb"> </span><span class="s">\]</span> discovered in 1905 by Albert Einstein. 
+
+In natural units (<span class="s">$</span><span class="nb">c </span><span class="o">=</span><span class="nb"> </span><span class="m">1</span><span class="s">$</span>), the formula expresses the identity
+<span class="k">\begin</span><span class="nb">{</span>equation<span class="nb">}</span>
+E=m
+<span class="k">\end</span><span class="nb">{</span>equation<span class="nb">}</span>
+<span class="k">\end</span><span class="nb">{</span>document<span class="nb">}</span>
+</pre></div>
+</div>
+</div>
+
+<p><a class="open-in-overleaf" target="_blank" href="https://www.overleaf.com/docs?engine=pdflatex
+&amp;snip_name=Display+math+mode+example
+&amp;snip=%5Cdocumentclass%5B12pt%2C+letterpaper%5D%7Barticle%7D%0A%5Cbegin%7Bdocument%7D%0AThe+mass-energy+equivalence+is+described+by+the+famous+equation%0A%5C%5B+E%3Dmc%5E2+%5C%5D+discovered+in+1905+by+Albert+Einstein.+%0A%0AIn+natural+units+%28%24c+%3D+1%24%29%2C+the+formula+expresses+the+identity%0A%5Cbegin%7Bequation%7D%0AE%3Dm%0A%5Cend%7Bequation%7D%0A%5Cend%7Bdocument%7D"><i class="fa fa-share"></i> Open this example in Overleaf.</a>
+</p><p class="mw-empty-elt"></p>
+<p>This example produces the following output:
+
+</p><div class="example"><div class="output">
+<img src="https://images.ctfassets.net/nrgyaltdicpt/6n1FPYFzmzCHPpWoEoYQZM/79b33f1096be06326bff7d2e1976c67c/LL30Fig11-plain.svg" alt="Image showing display mode math in LaTeX" style="width:100%;padding:20px" /> 
+</div></div>
+
+<p class="mw-empty-elt"></p><p>To typeset display-mode math you can use one of these delimiter pairs: <code>\[ ... \]</code>, <code>\begin{displaymath} ... \end{displaymath}</code> or <code>\begin{equation} ... \end{equation}</code>. Historically, typesetting display-mode math required use of <code>$$</code> characters delimiters, as in <code>$$ <em>... display math here ...</em>$$</code>, but  this method <a rel="nofollow" class="external text" href="https://texfaq.org/FAQ-dolldoll">is no longer recommended</a>: use LaTeX’s delimiters <code>\[ ... \]</code> instead.
+</p>
+<h3><span class="mw-headline" id="More_complete_examples">More complete examples</span></h3>
+<p>The following examples demonstrate a range of mathematical content typeset using LaTeX. 
+</p>
+<p class="mw-empty-elt"></p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\documentclass</span><span class="nb">{</span>article<span class="nb">}</span>
+<span class="k">\begin</span><span class="nb">{</span>document<span class="nb">}</span>
+Subscripts in math mode are written as <span class="s">$</span><span class="nb">a_b</span><span class="s">$</span> and superscripts are written as <span class="s">$</span><span class="nb">a^b</span><span class="s">$</span>. These can be combined and nested to write expressions such as
+
+<span class="sb">\[</span><span class="nb"> T^{i_</span><span class="m">1</span><span class="nb"> i_</span><span class="m">2</span><span class="nb"> </span><span class="nv">\dots</span><span class="nb"> i_p}_{j_</span><span class="m">1</span><span class="nb"> j_</span><span class="m">2</span><span class="nb"> </span><span class="nv">\dots</span><span class="nb"> j_q} </span><span class="o">=</span><span class="nb"> T</span><span class="o">(</span><span class="nb">x^{i_</span><span class="m">1</span><span class="nb">},</span><span class="nv">\dots</span><span class="nb">,x^{i_p},e_{j_</span><span class="m">1</span><span class="nb">},</span><span class="nv">\dots</span><span class="nb">,e_{j_q}</span><span class="o">)</span><span class="nb"> </span><span class="s">\]</span>
+ 
+We write integrals using <span class="s">$</span><span class="nv">\int</span><span class="s">$</span> and fractions using <span class="s">$</span><span class="nv">\frac</span><span class="nb">{a}{b}</span><span class="s">$</span>. Limits are placed on integrals using superscripts and subscripts:
+
+<span class="sb">\[</span><span class="nb"> </span><span class="nv">\int</span><span class="nb">_</span><span class="m">0</span><span class="nb">^</span><span class="m">1</span><span class="nb"> </span><span class="nv">\frac</span><span class="nb">{dx}{e^x} </span><span class="o">=</span><span class="nb">  </span><span class="nv">\frac</span><span class="nb">{e</span><span class="o">-</span><span class="m">1</span><span class="nb">}{e} </span><span class="s">\]</span>
+
+Lower case Greek letters are written as <span class="s">$</span><span class="nv">\omega</span><span class="s">$</span> <span class="s">$</span><span class="nv">\delta</span><span class="s">$</span> etc. while upper case Greek letters are written as <span class="s">$</span><span class="nv">\Omega</span><span class="s">$</span> <span class="s">$</span><span class="nv">\Delta</span><span class="s">$</span>.
+
+Mathematical operators are prefixed with a backslash as <span class="s">$</span><span class="nv">\sin</span><span class="o">(</span><span class="nv">\beta</span><span class="o">)</span><span class="s">$</span>, <span class="s">$</span><span class="nv">\cos</span><span class="o">(</span><span class="nv">\alpha</span><span class="o">)</span><span class="s">$</span>, <span class="s">$</span><span class="nv">\log</span><span class="o">(</span><span class="nb">x</span><span class="o">)</span><span class="s">$</span> etc.
+<span class="k">\end</span><span class="nb">{</span>document<span class="nb">}</span>
+</pre></div>
+</div>
+</div>
+
+<p><a class="open-in-overleaf" target="_blank" href="https://www.overleaf.com/docs?engine=pdflatex
+&amp;snip_name=More+advanced+LaTeX+math+example
+&amp;snip=%5Cdocumentclass%7Barticle%7D%0A%5Cbegin%7Bdocument%7D%0ASubscripts+in+math+mode+are+written+as+%24a_b%24+and+superscripts+are+written+as+%24a%5Eb%24.+These+can+be+combined+and+nested+to+write+expressions+such+as%0A%0A%5C%5B+T%5E%7Bi_1+i_2+%5Cdots+i_p%7D_%7Bj_1+j_2+%5Cdots+j_q%7D+%3D+T%28x%5E%7Bi_1%7D%2C%5Cdots%2Cx%5E%7Bi_p%7D%2Ce_%7Bj_1%7D%2C%5Cdots%2Ce_%7Bj_q%7D%29+%5C%5D%0A+%0AWe+write+integrals+using+%24%5Cint%24+and+fractions+using+%24%5Cfrac%7Ba%7D%7Bb%7D%24.+Limits+are+placed+on+integrals+using+superscripts+and+subscripts%3A%0A%0A%5C%5B+%5Cint_0%5E1+%5Cfrac%7Bdx%7D%7Be%5Ex%7D+%3D++%5Cfrac%7Be-1%7D%7Be%7D+%5C%5D%0A%0ALower+case+Greek+letters+are+written+as+%24%5Comega%24+%24%5Cdelta%24+etc.+while+upper+case+Greek+letters+are+written+as+%24%5COmega%24+%24%5CDelta%24.%0A%0AMathematical+operators+are+prefixed+with+a+backslash+as+%24%5Csin%28%5Cbeta%29%24%2C+%24%5Ccos%28%5Calpha%29%24%2C+%24%5Clog%28x%29%24+etc.%0A%5Cend%7Bdocument%7D"><i class="fa fa-share"></i> Open this example in Overleaf.</a>
+</p><p class="mw-empty-elt"></p>
+<p>This example produces the following output:
+
+</p><div class="example"><div class="output">
+<img src="https://images.ctfassets.net/nrgyaltdicpt/5xfm4NybWckHL5ndpdnBRq/bc0b5e27044820ea5cdd11648a68f543/LL30Fig12r-plain.svg" alt="Image showing a range of math typeset in LaTeX" style="width:100%;padding:20px" /> 
+</div></div>
+
+<p class="mw-empty-elt"></p><p>The next example uses the <code>equation*</code> environment which is provided by the <code>amsmath</code> package, so we need to add the following line to our document preamble:
+</p>
+<p class="mw-empty-elt">
+</p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\usepackage</span><span class="nb">{</span>amsmath<span class="nb">}</span><span class="c">% For the equation* environment</span>
+</pre></div>
+</div>
+</div>
+<p class="mw-empty-elt"></p>
+<p>For further information on using <code>amsmath</code> see <a href="/learn/latex/Aligning_equations" class="mw-redirect" title="Aligning equations">our help article</a>.
+</p>
+<p class="mw-empty-elt"></p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\documentclass</span><span class="nb">{</span>article<span class="nb">}</span>
+<span class="k">\usepackage</span><span class="nb">{</span>amsmath<span class="nb">}</span><span class="c">% For the equation* environment</span>
+<span class="k">\begin</span><span class="nb">{</span>document<span class="nb">}</span>
+<span class="k">\section</span><span class="nb">{</span>First example<span class="nb">}</span>
+
+The well-known Pythagorean theorem <span class="s">\(</span><span class="nb">x^</span><span class="m">2</span><span class="nb"> </span><span class="o">+</span><span class="nb"> y^</span><span class="m">2</span><span class="nb"> </span><span class="o">=</span><span class="nb"> z^</span><span class="m">2</span><span class="s">\)</span> was proved to be invalid for other exponents, meaning the next equation has no integer solutions for <span class="s">\(</span><span class="nb">n&gt;</span><span class="m">2</span><span class="s">\)</span>:
+
+<span class="sb">\[</span><span class="nb"> x^n </span><span class="o">+</span><span class="nb"> y^n </span><span class="o">=</span><span class="nb"> z^n </span><span class="s">\]</span>
+
+<span class="k">\section</span><span class="nb">{</span>Second example<span class="nb">}</span>
+
+This is a simple math expression <span class="s">\(</span><span class="nv">\sqrt</span><span class="nb">{x^</span><span class="m">2</span><span class="o">+</span><span class="m">1</span><span class="nb">}</span><span class="s">\)</span> inside text. 
+And this is also the same: 
+<span class="k">\begin</span><span class="nb">{</span>math<span class="nb">}</span>
+<span class="k">\sqrt</span><span class="nb">{</span>x<span class="nb">^</span>2+1<span class="nb">}</span>
+<span class="k">\end</span><span class="nb">{</span>math<span class="nb">}</span>
+but by using another command.
+
+This is a simple math expression without numbering
+<span class="sb">\[</span><span class="nv">\sqrt</span><span class="nb">{x^</span><span class="m">2</span><span class="o">+</span><span class="m">1</span><span class="nb">}</span><span class="s">\]</span> 
+separated from text.
+
+This is also the same:
+<span class="k">\begin</span><span class="nb">{</span>displaymath<span class="nb">}</span>
+<span class="k">\sqrt</span><span class="nb">{</span>x<span class="nb">^</span>2+1<span class="nb">}</span>
+<span class="k">\end</span><span class="nb">{</span>displaymath<span class="nb">}</span>
+
+<span class="k">\ldots</span> and this:
+<span class="k">\begin</span><span class="nb">{</span>equation*<span class="nb">}</span>
+<span class="k">\sqrt</span><span class="nb">{</span>x<span class="nb">^</span>2+1<span class="nb">}</span>
+<span class="k">\end</span><span class="nb">{</span>equation*<span class="nb">}</span>
+<span class="k">\end</span><span class="nb">{</span>document<span class="nb">}</span>
+</pre></div>
+</div>
+</div>
+
+<p><a class="open-in-overleaf" target="_blank" href="https://www.overleaf.com/docs?engine=pdflatex
+&amp;snip_name=More+math+content+typeset+in+LaTeX
+&amp;snip=%5Cdocumentclass%7Barticle%7D%0A%5Cusepackage%7Bamsmath%7D%25+For+the+equation%2A+environment%0A%5Cbegin%7Bdocument%7D%0A%5Csection%7BFirst+example%7D%0A%0AThe+well-known+Pythagorean+theorem+%5C%28x%5E2+%2B+y%5E2+%3D+z%5E2%5C%29+was+proved+to+be+invalid+for+other+exponents%2C+meaning+the+next+equation+has+no+integer+solutions+for+%5C%28n%3E2%5C%29%3A%0A%0A%5C%5B+x%5En+%2B+y%5En+%3D+z%5En+%5C%5D%0A%0A%5Csection%7BSecond+example%7D%0A%0AThis+is+a+simple+math+expression+%5C%28%5Csqrt%7Bx%5E2%2B1%7D%5C%29+inside+text.+%0AAnd+this+is+also+the+same%3A+%0A%5Cbegin%7Bmath%7D%0A%5Csqrt%7Bx%5E2%2B1%7D%0A%5Cend%7Bmath%7D%0Abut+by+using+another+command.%0A%0AThis+is+a+simple+math+expression+without+numbering%0A%5C%5B%5Csqrt%7Bx%5E2%2B1%7D%5C%5D+%0Aseparated+from+text.%0A%0AThis+is+also+the+same%3A%0A%5Cbegin%7Bdisplaymath%7D%0A%5Csqrt%7Bx%5E2%2B1%7D%0A%5Cend%7Bdisplaymath%7D%0A%0A%5Cldots+and+this%3A%0A%5Cbegin%7Bequation%2A%7D%0A%5Csqrt%7Bx%5E2%2B1%7D%0A%5Cend%7Bequation%2A%7D%0A%5Cend%7Bdocument%7D"><i class="fa fa-share"></i> Open this example in Overleaf.</a>
+</p><p class="mw-empty-elt"></p>
+<p>This example produces the following output:
+
+</p><div class="example"><div class="output">
+<img src="https://images.ctfassets.net/nrgyaltdicpt/hT85gkewCDlxCHeNU5slE/9256c129b25bec7a93dcfe9e44b0654a/LL30Fig13r-plain.svg" alt="Image showing a range of math typeset in LaTeX" style="width:100%;padding:20px" /> 
+</div></div>
+
+<p class="mw-empty-elt"></p><p>The possibilities with math in <span class="texhtml" style="font-family:'CMU Serif', cmr10, LMRoman10-Regular, 'Times New Roman', 'Nimbus Roman No9 L', Times, serif">L<span style="text-transform:uppercase;font-size:70%;margin-left:-0.36em;vertical-align:0.3em;line-height:0;margin-right:-0.15em">a</span>T<span style="text-transform:uppercase;margin-left:-0.1667em;vertical-align:-0.5ex;line-height:0;margin-right:-0.125em">e</span>X</span> are endless so be sure to visit our help pages for advice and examples on specific topics:
+</p>
+<ul><li><a href="/learn/latex/Mathematical_expressions" title="Mathematical expressions">Mathematical expressions</a></li>
+<li><a href="/learn/latex/Subscripts_and_superscripts" title="Subscripts and superscripts">Subscripts and superscripts</a></li>
+<li><a href="/learn/latex/Brackets_and_Parentheses" title="Brackets and Parentheses">Brackets and Parentheses</a></li>
+<li><a href="/learn/latex/Fractions_and_Binomials" title="Fractions and Binomials">Fractions and Binomials</a></li>
+<li><a href="/learn/latex/Aligning_equations_with_amsmath" title="Aligning equations with amsmath">Aligning Equations</a></li>
+<li><a href="/learn/latex/Operators" title="Operators">Operators</a></li>
+<li><a href="/learn/latex/Spacing_in_math_mode" title="Spacing in math mode">Spacing in math mode</a></li>
+<li><a href="/learn/latex/Integrals%2C_sums_and_limits" title="Integrals, sums and limits">Integrals, sums and limits</a></li>
+<li><a href="/learn/latex/Display_style_in_math_mode" title="Display style in math mode">Display style in math mode</a></li>
+<li><a href="/learn/latex/List_of_Greek_letters_and_math_symbols" title="List of Greek letters and math symbols">List of Greek letters and math symbols</a></li>
+<li><a href="/learn/latex/Mathematical_fonts" title="Mathematical fonts">Mathematical fonts</a></li></ul>
+<h2><span class="mw-headline" id="Basic_document_structure">Basic document structure</span></h2>
+<p>Next, we explore abstracts and how to partition a <span class="texhtml" style="font-family:'CMU Serif', cmr10, LMRoman10-Regular, 'Times New Roman', 'Nimbus Roman No9 L', Times, serif">L<span style="text-transform:uppercase;font-size:70%;margin-left:-0.36em;vertical-align:0.3em;line-height:0;margin-right:-0.15em">a</span>T<span style="text-transform:uppercase;margin-left:-0.1667em;vertical-align:-0.5ex;line-height:0;margin-right:-0.125em">e</span>X</span> document into different chapters, sections and paragraphs.
+</p>
+<h3><span class="mw-headline" id="Abstracts">Abstracts</span></h3>
+<p>Scientific articles usually provide an <em>abstract</em> which is a brief overview/summary of their core topics, or arguments. The next example demonstrates typesetting an abstract using <span class="texhtml" style="font-family:'CMU Serif', cmr10, LMRoman10-Regular, 'Times New Roman', 'Nimbus Roman No9 L', Times, serif">L<span style="text-transform:uppercase;font-size:70%;margin-left:-0.36em;vertical-align:0.3em;line-height:0;margin-right:-0.15em">a</span>T<span style="text-transform:uppercase;margin-left:-0.1667em;vertical-align:-0.5ex;line-height:0;margin-right:-0.125em">e</span>X</span>’s <code>abstract</code> environment:
+</p>
+<p class="mw-empty-elt"></p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\documentclass</span><span class="nb">{</span>article<span class="nb">}</span>
+<span class="k">\begin</span><span class="nb">{</span>document<span class="nb">}</span>
+<span class="k">\begin</span><span class="nb">{</span>abstract<span class="nb">}</span>
+This is a simple paragraph at the beginning of the 
+document. A brief introduction about the main subject.
+<span class="k">\end</span><span class="nb">{</span>abstract<span class="nb">}</span>
+<span class="k">\end</span><span class="nb">{</span>document<span class="nb">}</span>
+</pre></div>
+</div>
+</div>
+
+<p><a class="open-in-overleaf" target="_blank" href="https://www.overleaf.com/docs?engine=pdflatex
+&amp;snip_name=How+to+create+a+document+abstract
+&amp;snip=%5Cdocumentclass%7Barticle%7D%0A%5Cbegin%7Bdocument%7D%0A%5Cbegin%7Babstract%7D%0AThis+is+a+simple+paragraph+at+the+beginning+of+the+%0Adocument.+A+brief+introduction+about+the+main+subject.%0A%5Cend%7Babstract%7D%0A%5Cend%7Bdocument%7D"><i class="fa fa-share"></i> Open this example in Overleaf.</a>
+</p><p class="mw-empty-elt"></p>
+<p>This example produces the following output:
+
+</p><div class="example"><div class="output">
+<img src="https://images.ctfassets.net/nrgyaltdicpt/4cPu8x8ZxuDVF6efcZ03yi/91aa6aa84719613b0e25c725b70aa0b8/LL30Fig14-plain.svg" alt="Image showing an abstract typeset in LaTeX" style="width:100%;padding:20px" /> 
+</div></div>
+
+<p class="mw-empty-elt"></p>
+<h3><span class="mw-headline" id="Paragraphs_and_new_lines">Paragraphs and new lines</span></h3>
+<p>With the abstract in place, we can begin writing our first paragraph. The next example demonstrates: 
+</p>
+<ul><li>how a new paragraph is created by pressing the "enter" key twice, ending the current line and inserting a subsequent blank line;</li>
+<li>how to start a new line without starting a new paragraph by inserting a manual line break using the <code>\\</code> command, which is a double backslash; alternatively, use the <code>\newline</code> command.</li></ul>
+<p>The third paragraph in this example demonstrates use of the commands <code>\\</code> and <code>\newline</code>:
+</p>
+<p class="mw-empty-elt"></p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\documentclass</span><span class="nb">{</span>article<span class="nb">}</span>
+<span class="k">\begin</span><span class="nb">{</span>document<span class="nb">}</span>
+
+<span class="k">\begin</span><span class="nb">{</span>abstract<span class="nb">}</span>
+This is a simple paragraph at the beginning of the 
+document. A brief introduction about the main subject.
+<span class="k">\end</span><span class="nb">{</span>abstract<span class="nb">}</span>
+
+After our abstract we can begin the first paragraph, then press ``enter'' twice to start the second one.
+
+This line will start a second paragraph.
+
+I will start the third paragraph and then add <span class="k">\\</span> a manual line break which causes this text to start on a new line but remains part of the same paragraph. Alternatively, I can use the <span class="k">\verb</span>|<span class="k">\newline</span>|<span class="k">\newline</span> command to start a new line, which is also part of the same paragraph.
+<span class="k">\end</span><span class="nb">{</span>document<span class="nb">}</span>
+</pre></div>
+</div>
+</div>
+
+<p><a class="open-in-overleaf" target="_blank" href="https://www.overleaf.com/docs?engine=pdflatex
+&amp;snip_name=Example+to+create+a+new+paragraph
+&amp;snip=%5Cdocumentclass%7Barticle%7D%0A%5Cbegin%7Bdocument%7D%0A%0A%5Cbegin%7Babstract%7D%0AThis+is+a+simple+paragraph+at+the+beginning+of+the+%0Adocument.+A+brief+introduction+about+the+main+subject.%0A%5Cend%7Babstract%7D%0A%0AAfter+our+abstract+we+can+begin+the+first+paragraph%2C+then+press+%60%60enter%27%27+twice+to+start+the+second+one.%0A%0AThis+line+will+start+a+second+paragraph.%0A%0AI+will+start+the+third+paragraph+and+then+add+%5C%5C+a+manual+line+break+which+causes+this+text+to+start+on+a+new+line+but+remains+part+of+the+same+paragraph.+Alternatively%2C+I+can+use+the+%5Cverb%7C%5Cnewline%7C%5Cnewline+command+to+start+a+new+line%2C+which+is+also+part+of+the+same+paragraph.%0A%5Cend%7Bdocument%7D"><i class="fa fa-share"></i> Open this example in Overleaf.</a>
+</p><p class="mw-empty-elt"></p>
+<p>This example produces the following output:
+
+</p><div class="example"><div class="output">
+<img src="https://images.ctfassets.net/nrgyaltdicpt/5DdSH06hFli8k4lR0dxw4m/a55cddf9aa10b64302ae7b72ba0c6447/LL30Fig15r-plain.svg" alt="Image showing the creation of paragraphs in LaTeX" style="width:100%;padding:20px" /> 
+</div></div>
+
+<p class="mw-empty-elt"></p><p>Note how <span class="texhtml" style="font-family:'CMU Serif', cmr10, LMRoman10-Regular, 'Times New Roman', 'Nimbus Roman No9 L', Times, serif">L<span style="text-transform:uppercase;font-size:70%;margin-left:-0.36em;vertical-align:0.3em;line-height:0;margin-right:-0.15em">a</span>T<span style="text-transform:uppercase;margin-left:-0.1667em;vertical-align:-0.5ex;line-height:0;margin-right:-0.125em">e</span>X</span> automatically indents paragraphs—except immediately after document headings such as section and subsection—<a href="#Chapters_and_sections">as we will see</a>.
+</p><p>New users are advised that multiple <code>\\</code> or <code>\newline</code>s should not be used to “simulate” paragraphs with larger spacing between them because this can interfere with <span class="texhtml" style="font-family:'CMU Serif', cmr10, LMRoman10-Regular, 'Times New Roman', 'Nimbus Roman No9 L', Times, serif">L<span style="text-transform:uppercase;font-size:70%;margin-left:-0.36em;vertical-align:0.3em;line-height:0;margin-right:-0.15em">a</span>T<span style="text-transform:uppercase;margin-left:-0.1667em;vertical-align:-0.5ex;line-height:0;margin-right:-0.125em">e</span>X</span>’s typesetting algorithms. The recommended method is to continue using blank lines for creating new paragraphs, without any <code>\\</code>, and load the <a rel="nofollow" class="external text" href="https://ctan.org/pkg/parskip?lang=en"><code>parskip</code> package</a> by adding <code>\usepackage{parskip}</code> to the preamble.
+</p><p>Further information on paragraphs can be found in the following articles:
+</p>
+<ul><li><a href="/learn/latex/Paragraphs_and_new_lines" title="Paragraphs and new lines">Paragraphs and new lines</a></li>
+<li><a href="/learn/latex/Articles/How_to_change_paragraph_spacing_in_LaTeX" title="Articles/How to change paragraph spacing in LaTeX">How to change paragraph spacing in LaTeX</a></li>
+<li><a href="/learn/latex/Errors/LaTeX_Error%3A_There%27s_no_line_here_to_end" title="Errors/LaTeX Error: There's no line here to end">LaTeX Error: There's no line here to end</a> provides additional advice and guidance on using <code>\\</code>.</li></ul>
+<h3><span class="mw-headline" id="Chapters_and_sections">Chapters and sections</span></h3>
+<p>Longer documents, irrespective of authoring software, are usually partitioned into parts, chapters, sections, subsections and so forth. LaTeX also provides document-structuring commands but the available commands, and their implementations (what they do), can depend on the document class being used. By way of example, documents created using the <code>book</code> class can be split into parts, chapters, sections, subsections and so forth but the <code>letter</code> class does not provide (support) any commands to do that. 
+</p><p>This next example demonstrates commands used to structure a document based on the <code>book</code> class:
+</p>
+<p class="mw-empty-elt"></p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\documentclass</span><span class="nb">{</span>book<span class="nb">}</span>
+<span class="k">\begin</span><span class="nb">{</span>document<span class="nb">}</span>
+
+<span class="k">\chapter</span><span class="nb">{</span>First Chapter<span class="nb">}</span>
+
+<span class="k">\section</span><span class="nb">{</span>Introduction<span class="nb">}</span>
+
+This is the first section.
+
+Lorem  ipsum  dolor  sit  amet,  consectetuer  adipiscing  
+elit. Etiam  lobortisfacilisis sem.  Nullam nec mi et 
+neque pharetra sollicitudin.  Praesent imperdietmi nec ante. 
+Donec ullamcorper, felis non sodales...
+
+<span class="k">\section</span><span class="nb">{</span>Second Section<span class="nb">}</span>
+
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit.  
+Etiam lobortis facilisissem.  Nullam nec mi et neque pharetra 
+sollicitudin.  Praesent imperdiet mi necante...
+
+<span class="k">\subsection</span><span class="nb">{</span>First Subsection<span class="nb">}</span>
+Praesent imperdietmi nec ante. Donec ullamcorper, felis non sodales...
+
+<span class="k">\section*</span><span class="nb">{</span>Unnumbered Section<span class="nb">}</span>
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit.  
+Etiam lobortis facilisissem...
+<span class="k">\end</span><span class="nb">{</span>document<span class="nb">}</span>
+</pre></div>
+</div>
+</div>
+
+<p><a class="open-in-overleaf" target="_blank" href="https://www.overleaf.com/docs?engine=pdflatex
+&amp;snip_name=Book+class+example+document
+&amp;snip=%5Cdocumentclass%7Bbook%7D%0A%5Cbegin%7Bdocument%7D%0A%0A%5Cchapter%7BFirst+Chapter%7D%0A%0A%5Csection%7BIntroduction%7D%0A%0AThis+is+the+first+section.%0A%0ALorem++ipsum++dolor++sit++amet%2C++consectetuer++adipiscing++%0Aelit.+Etiam++lobortisfacilisis+sem.++Nullam+nec+mi+et+%0Aneque+pharetra+sollicitudin.++Praesent+imperdietmi+nec+ante.+%0ADonec+ullamcorper%2C+felis+non+sodales...%0A%0A%5Csection%7BSecond+Section%7D%0A%0ALorem+ipsum+dolor+sit+amet%2C+consectetuer+adipiscing+elit.++%0AEtiam+lobortis+facilisissem.++Nullam+nec+mi+et+neque+pharetra+%0Asollicitudin.++Praesent+imperdiet+mi+necante...%0A%0A%5Csubsection%7BFirst+Subsection%7D%0APraesent+imperdietmi+nec+ante.+Donec+ullamcorper%2C+felis+non+sodales...%0A%0A%5Csection%2A%7BUnnumbered+Section%7D%0ALorem+ipsum+dolor+sit+amet%2C+consectetuer+adipiscing+elit.++%0AEtiam+lobortis+facilisissem...%0A%5Cend%7Bdocument%7D"><i class="fa fa-share"></i> Open this example in Overleaf.</a>
+</p><p class="mw-empty-elt"></p>
+<p>This example produces the following output:
+
+</p><div class="example"><div class="output">
+<img src="https://images.ctfassets.net/nrgyaltdicpt/1A1T7YsurQdM058OwmLqd8/7f6e962c31356bafa702bab9062f6061/LL30Fig16-plain.svg" alt="Image showing sections in LaTeX book document" style="width:100%;padding:20px" /> 
+</div></div>
+
+<p class="mw-empty-elt"></p><p>The names of sectioning commands are mostly self-explanatory; for example, <code>\chapter{First Chapter}</code> creates a new chapter titled <code>First Chapter</code>, <code>\section{Introduction}</code> produces a section titled <code>Introduction</code>, and so forth. Sections can be further divided into <code>\subsection{...}</code> and even <code>\subsubsection{...}</code>. The numbering of sections, subsections etc. is automatic but can be disabled by using the so-called <em>starred version</em> of the appropriate command which has an asterisk (*) at the end, such as <code>\section*{...}</code> and <code>\subsection*{...}</code>. 
+</p><p><em>Collectively</em>, LaTeX document classes provide the following sectioning commands, with specific classes each supporting a relevant subset:
+</p>
+<ul><li><code>\part{part}</code></li>
+<li><code>\chapter{chapter}</code></li>
+<li><code>\section{section}</code></li>
+<li><code>\subsection{subsection}</code></li>
+<li><code>\subsubsection{subsubsection}</code></li>
+<li><code>\paragraph{paragraph}</code></li>
+<li><code>\subparagraph{subparagraph}</code></li></ul>
+<p>In particular, the <code>\part</code> and <code>\chapter</code> commands are only available in the <code>report</code> and <code>book</code> document classes. 
+</p><p>Visit the Overleaf article <a href="/learn/latex/Sections_and_chapters" title="Sections and chapters">article about sections and chapters</a> for further information about document-structure commands.
+</p>
+<h2><span class="mw-headline" id="Creating_tables">Creating tables</span></h2>
+<p>Overleaf provides three options to create tables: 
+</p>
+<ol>
+<li>Using the <a rel="nofollow" class="external text" href="https://www.overleaf.com/learn/how-to/How_to_insert_tables_in_Overleaf%23inserttable#Using_Insert_Table_to_create_a_table_in_your_project"><b>Insert Table</b> button</a> in the <b>Visual Editor</b> (or <b>Code Editor</b>) toolbar.</li>
+<li><a rel="nofollow" class="external text" href="https://www.overleaf.com/learn/how-to/How_to_paste_formatted_content_into_Overleaf%23pastingtables">Copying and pasting a table</a> from another document while using <b>Visual Editor</b>.</li>
+<li>Writing the LaTeX code for the table in Code Editor.</li> 
+</ol>
+<p>If you’re new to LaTeX, using the toolbar in <b>Visual Editor</b> (option 1) is a great way to get started—you can switch between <b>Visual Editor</b> and <b>Code Editor</b> to see the code behind the table.</p>
+<p>Here, we focus on option 3—the most flexible method for creating tables—and provide examples that demonstrate how to create tables in LaTeX, including the addition of lines (rules) and captions. As you gain experience, take a look at our detailed guidance on <a rel="nofollow" class="external text" href="https://www.overleaf.com/learn/latex/Tables">how to create tables using LaTeX</a>.</p>
+<h3><span class="mw-headline" id="Creating_a_basic_table_in_LaTeX">Creating a basic table in <span class="texhtml" style="font-family:'CMU Serif', cmr10, LMRoman10-Regular, 'Times New Roman', 'Nimbus Roman No9 L', Times, serif">L<span style="text-transform:uppercase;font-size:70%;margin-left:-0.36em;vertical-align:0.3em;line-height:0;margin-right:-0.15em">a</span>T<span style="text-transform:uppercase;margin-left:-0.1667em;vertical-align:-0.5ex;line-height:0;margin-right:-0.125em">e</span>X</span></span></h3>
+<p>We start with an example showing how to typeset a basic table:
+</p>
+<p class="mw-empty-elt"></p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\begin</span><span class="nb">{</span>center<span class="nb">}</span>
+<span class="k">\begin</span><span class="nb">{</span>tabular<span class="nb">}{</span>c c c<span class="nb">}</span>
+ cell1 <span class="nb">&amp;</span> cell2 <span class="nb">&amp;</span> cell3 <span class="k">\\</span> 
+ cell4 <span class="nb">&amp;</span> cell5 <span class="nb">&amp;</span> cell6 <span class="k">\\</span>  
+ cell7 <span class="nb">&amp;</span> cell8 <span class="nb">&amp;</span> cell9    
+<span class="k">\end</span><span class="nb">{</span>tabular<span class="nb">}</span>
+<span class="k">\end</span><span class="nb">{</span>center<span class="nb">}</span>
+</pre></div>
+</div>
+</div>
+
+<p><a class="open-in-overleaf" target="_blank" href="https://www.overleaf.com/docs?engine=pdflatex
+&amp;snip_name=An+example+of+a+basic+table
+&amp;snip=%5Cdocumentclass%7Barticle%7D%0A%5Cbegin%7Bdocument%7D%0A%5Cbegin%7Bcenter%7D%0A%5Cbegin%7Btabular%7D%7Bc+c+c%7D%0A+cell1+%26+cell2+%26+cell3+%5C%5C+%0A+cell4+%26+cell5+%26+cell6+%5C%5C++%0A+cell7+%26+cell8+%26+cell9++++%0A%5Cend%7Btabular%7D%0A%5Cend%7Bcenter%7D%0A%5Cend%7Bdocument%7D%0A%3C%2Fsource%3E"><i class="fa fa-share"></i> Open this example in Overleaf.</a>
+</p><p class="mw-empty-elt"></p>
+<p>This example produces the following output:
+
+</p><div class="example"><div class="output">
+<img src="https://images.ctfassets.net/nrgyaltdicpt/5K46QavbKv9vF4RI1GbUf2/f22d4f8a06d00251166f86d2c891321e/LL30Fig17-plain.svg" alt="Graphic displaying a table typeset in LaTeX" style="width:45%;padding:20px" /> 
+</div></div>
+
+<p class="mw-empty-elt"></p><p>The <code>tabular</code> environment is the default <span class="texhtml" style="font-family:'CMU Serif', cmr10, LMRoman10-Regular, 'Times New Roman', 'Nimbus Roman No9 L', Times, serif">L<span style="text-transform:uppercase;font-size:70%;margin-left:-0.36em;vertical-align:0.3em;line-height:0;margin-right:-0.15em">a</span>T<span style="text-transform:uppercase;margin-left:-0.1667em;vertical-align:-0.5ex;line-height:0;margin-right:-0.125em">e</span>X</span> method to create tables. You must specify a parameter to this environment, in this case <code>{c c c}</code> which advises <span class="texhtml" style="font-family:'CMU Serif', cmr10, LMRoman10-Regular, 'Times New Roman', 'Nimbus Roman No9 L', Times, serif">L<span style="text-transform:uppercase;font-size:70%;margin-left:-0.36em;vertical-align:0.3em;line-height:0;margin-right:-0.15em">a</span>T<span style="text-transform:uppercase;margin-left:-0.1667em;vertical-align:-0.5ex;line-height:0;margin-right:-0.125em">e</span>X</span> that there will be three columns and the text inside each one must be centred. You can also use <code>r</code> to right-align the text and <code>l</code> to left-align it. The alignment symbol <code>&amp;</code> is used to demarcate individual table cells within a table row. To end a table row use the <i>new line</i> command <code>\\</code>. Our table is contained within a <code>center</code> environment to make it centred within the text width of the page.
+</p>
+<h3><span class="mw-headline" id="Adding_borders">Adding borders</span></h3>
+<p>The <code>tabular</code> environment supports horizontal and vertical lines (rules) as part of the table:
+</p>
+<ul><li>to add horizontal rules, above and below rows, use the <code>\hline</code> command</li>
+<li>to add vertical rules, between columns, use the vertical line parameter <code>|</code></li></ul>
+<p>In this example the argument is <code>{|c|c|c|}</code> which declares three (centred) columns each separated by a vertical line (rule); in addition, we use <code>\hline</code> to place a horizontal rule above the first row and below the final row:
+</p>
+<p class="mw-empty-elt"></p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\begin</span><span class="nb">{</span>center<span class="nb">}</span>
+<span class="k">\begin</span><span class="nb">{</span>tabular<span class="nb">}{</span>|c|c|c|<span class="nb">}</span> 
+ <span class="k">\hline</span>
+ cell1 <span class="nb">&amp;</span> cell2 <span class="nb">&amp;</span> cell3 <span class="k">\\</span> 
+ cell4 <span class="nb">&amp;</span> cell5 <span class="nb">&amp;</span> cell6 <span class="k">\\</span> 
+ cell7 <span class="nb">&amp;</span> cell8 <span class="nb">&amp;</span> cell9 <span class="k">\\</span> 
+ <span class="k">\hline</span>
+<span class="k">\end</span><span class="nb">{</span>tabular<span class="nb">}</span>
+<span class="k">\end</span><span class="nb">{</span>center<span class="nb">}</span>
+</pre></div>
+</div>
+</div>
+
+<p><a class="open-in-overleaf" target="_blank" href="https://www.overleaf.com/docs?engine=pdflatex
+&amp;snip_name=Table+example+with+rules
+&amp;snip=%5Cdocumentclass%7Barticle%7D%0A%5Cbegin%7Bdocument%7D%0A%5Cbegin%7Bcenter%7D%0A%5Cbegin%7Btabular%7D%7B%7Cc%7Cc%7Cc%7C%7D+%0A+%5Chline%0A+cell1+%26+cell2+%26+cell3+%5C%5C+%0A+cell4+%26+cell5+%26+cell6+%5C%5C+%0A+cell7+%26+cell8+%26+cell9+%5C%5C+%0A+%5Chline%0A%5Cend%7Btabular%7D%0A%5Cend%7Bcenter%7D%0A%5Cend%7Bdocument%7D"><i class="fa fa-share"></i> Open this example in Overleaf.</a>
+</p><p class="mw-empty-elt"></p>
+<p>This example produces the following output:
+
+</p><div class="example"><div class="output">
+<img src="https://images.ctfassets.net/nrgyaltdicpt/5uWYGUhK1XJJJaWz5R1EmX/3ee88bf6b2eaf8d0644b57fa8064800b/LL30Fig18-plain.svg" alt="Graphic displaying a table typeset in LaTeX containing horizontal and vertical rules" style="width:45%;padding:20px" /> 
+</div></div>
+
+<p class="mw-empty-elt"></p><p>Here is a further example:
+</p>
+<p class="mw-empty-elt"></p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\begin</span><span class="nb">{</span>center<span class="nb">}</span>
+ <span class="k">\begin</span><span class="nb">{</span>tabular<span class="nb">}{</span>||c c c c||<span class="nb">}</span> 
+ <span class="k">\hline</span>
+ Col1 <span class="nb">&amp;</span> Col2 <span class="nb">&amp;</span> Col2 <span class="nb">&amp;</span> Col3 <span class="k">\\</span> [0.5ex] 
+ <span class="k">\hline\hline</span>
+ 1 <span class="nb">&amp;</span> 6 <span class="nb">&amp;</span> 87837 <span class="nb">&amp;</span> 787 <span class="k">\\</span> 
+ <span class="k">\hline</span>
+ 2 <span class="nb">&amp;</span> 7 <span class="nb">&amp;</span> 78 <span class="nb">&amp;</span> 5415 <span class="k">\\</span>
+ <span class="k">\hline</span>
+ 3 <span class="nb">&amp;</span> 545 <span class="nb">&amp;</span> 778 <span class="nb">&amp;</span> 7507 <span class="k">\\</span>
+ <span class="k">\hline</span>
+ 4 <span class="nb">&amp;</span> 545 <span class="nb">&amp;</span> 18744 <span class="nb">&amp;</span> 7560 <span class="k">\\</span>
+ <span class="k">\hline</span>
+ 5 <span class="nb">&amp;</span> 88 <span class="nb">&amp;</span> 788 <span class="nb">&amp;</span> 6344 <span class="k">\\</span> [1ex] 
+ <span class="k">\hline</span>
+<span class="k">\end</span><span class="nb">{</span>tabular<span class="nb">}</span>
+<span class="k">\end</span><span class="nb">{</span>center<span class="nb">}</span>
+</pre></div>
+</div>
+</div>
+
+<p><a class="open-in-overleaf" target="_blank" href="https://www.overleaf.com/docs?engine=pdflatex
+&amp;snip_name=Another+table+example+containing+rules
+&amp;snip=%5Cdocumentclass%7Barticle%7D%0A%5Cbegin%7Bdocument%7D%0A%5Cbegin%7Bcenter%7D%0A+%5Cbegin%7Btabular%7D%7B%7C%7Cc+c+c+c%7C%7C%7D+%0A+%5Chline%0A+Col1+%26+Col2+%26+Col2+%26+Col3+%5C%5C+%5B0.5ex%5D+%0A+%5Chline%5Chline%0A+1+%26+6+%26+87837+%26+787+%5C%5C+%0A+%5Chline%0A+2+%26+7+%26+78+%26+5415+%5C%5C%0A+%5Chline%0A+3+%26+545+%26+778+%26+7507+%5C%5C%0A+%5Chline%0A+4+%26+545+%26+18744+%26+7560+%5C%5C%0A+%5Chline%0A+5+%26+88+%26+788+%26+6344+%5C%5C+%5B1ex%5D+%0A+%5Chline%0A%5Cend%7Btabular%7D%0A%5Cend%7Bcenter%7D%0A%5Cend%7Bdocument%7D"><i class="fa fa-share"></i> Open this example in Overleaf.</a>
+</p><p class="mw-empty-elt"></p>
+<p>This example produces the following output:
+
+</p><div class="example"><div class="output">
+<img src="https://images.ctfassets.net/nrgyaltdicpt/1Cy9FcRnDVDRUPQdCgaKq6/c21e5f7d9a53514756c6e1f2996e51e0/LL30Fig19-plain.svg" alt="Graphic displaying a table typeset in LaTeX containing horizontal and vertical rules" style="width:60%;padding:20px" /> 
+</div></div>
+
+<p class="mw-empty-elt"></p>
+<h3><span id="Captions.2C_labels_and_references_2"></span><span class="mw-headline" id="Captions,_labels_and_references_2">Captions, labels and references</span></h3>
+<p>You can caption and reference tables in much the same way as images. The only difference is that instead of the <b><code>figure</code></b> environment, you use the <b><code>table</code></b> environment.
+</p>
+<p class="mw-empty-elt"></p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span>Table <span class="k">\ref</span><span class="nb">{</span>table:data<span class="nb">}</span> shows how to add a table caption and reference a table.
+<span class="k">\begin</span><span class="nb">{</span>table<span class="nb">}</span>[h!]
+<span class="k">\centering</span>
+<span class="k">\begin</span><span class="nb">{</span>tabular<span class="nb">}{</span>||c c c c||<span class="nb">}</span> 
+ <span class="k">\hline</span>
+ Col1 <span class="nb">&amp;</span> Col2 <span class="nb">&amp;</span> Col2 <span class="nb">&amp;</span> Col3 <span class="k">\\</span> [0.5ex] 
+ <span class="k">\hline\hline</span>
+ 1 <span class="nb">&amp;</span> 6 <span class="nb">&amp;</span> 87837 <span class="nb">&amp;</span> 787 <span class="k">\\</span> 
+ 2 <span class="nb">&amp;</span> 7 <span class="nb">&amp;</span> 78 <span class="nb">&amp;</span> 5415 <span class="k">\\</span>
+ 3 <span class="nb">&amp;</span> 545 <span class="nb">&amp;</span> 778 <span class="nb">&amp;</span> 7507 <span class="k">\\</span>
+ 4 <span class="nb">&amp;</span> 545 <span class="nb">&amp;</span> 18744 <span class="nb">&amp;</span> 7560 <span class="k">\\</span>
+ 5 <span class="nb">&amp;</span> 88 <span class="nb">&amp;</span> 788 <span class="nb">&amp;</span> 6344 <span class="k">\\</span> [1ex] 
+ <span class="k">\hline</span>
+<span class="k">\end</span><span class="nb">{</span>tabular<span class="nb">}</span>
+<span class="k">\caption</span><span class="nb">{</span>Table to test captions and labels.<span class="nb">}</span>
+<span class="k">\label</span><span class="nb">{</span>table:data<span class="nb">}</span>
+<span class="k">\end</span><span class="nb">{</span>table<span class="nb">}</span>
+</pre></div>
+</div>
+</div>
+
+<p><a class="open-in-overleaf" target="_blank" href="https://www.overleaf.com/docs?engine=pdflatex
+&amp;snip_name=Table+captions+and+references
+&amp;snip=%5Cdocumentclass%7Barticle%7D%0A%5Cbegin%7Bdocument%7D%0ATable+%5Cref%7Btable%3Adata%7D+shows+how+to+add+a+table+caption+and+reference+a+table.%0A%5Cbegin%7Btable%7D%5Bh%21%5D%0A%5Ccentering%0A%5Cbegin%7Btabular%7D%7B%7C%7Cc+c+c+c%7C%7C%7D+%0A+%5Chline%0A+Col1+%26+Col2+%26+Col2+%26+Col3+%5C%5C+%5B0.5ex%5D+%0A+%5Chline%5Chline%0A+1+%26+6+%26+87837+%26+787+%5C%5C+%0A+2+%26+7+%26+78+%26+5415+%5C%5C%0A+3+%26+545+%26+778+%26+7507+%5C%5C%0A+4+%26+545+%26+18744+%26+7560+%5C%5C%0A+5+%26+88+%26+788+%26+6344+%5C%5C+%5B1ex%5D+%0A+%5Chline%0A%5Cend%7Btabular%7D%0A%5Ccaption%7BTable+to+test+captions+and+labels.%7D%0A%5Clabel%7Btable%3Adata%7D%0A%5Cend%7Btable%7D%0A%5Cend%7Bdocument%7D"><i class="fa fa-share"></i> Open this example in Overleaf.</a>
+</p><p class="mw-empty-elt"></p>
+<p>This example produces the following output:
+
+</p><div class="example"><div class="output">
+<img src="https://images.ctfassets.net/nrgyaltdicpt/1f5w74UIaTCkpApaPdVeWf/580a87c2413ddc9d6bdef3bf462689fc/LL30Fig20-plain.svg" alt="A LaTeX table with a caption" style="width:90%;padding:20px" /> 
+</div></div>
+
+<p class="mw-empty-elt"></p>
+<h2><span class="mw-headline" id="Adding_a_Table_of_Contents">Adding a Table of Contents</span></h2>
+<p>Creating a table of contents is straightforward because the command <code>\tableofcontents</code> does almost all the work for you:
+</p>
+<p class="mw-empty-elt"></p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\documentclass</span><span class="nb">{</span>article<span class="nb">}</span>
+<span class="k">\title</span><span class="nb">{</span>Sections and Chapters<span class="nb">}</span>
+<span class="k">\author</span><span class="nb">{</span>Gubert Farnsworth<span class="nb">}</span>
+<span class="k">\date</span><span class="nb">{</span>August 2022<span class="nb">}</span>
+<span class="k">\begin</span><span class="nb">{</span>document<span class="nb">}</span>
+  
+<span class="k">\maketitle</span>
+  
+<span class="k">\tableofcontents</span>
+
+<span class="k">\section</span><span class="nb">{</span>Introduction<span class="nb">}</span>
+   
+This is the first section.
+      
+Lorem  ipsum  dolor  sit  amet,  consectetuer  adipiscing  
+elit.   Etiam  lobortisfacilisis sem.  Nullam nec mi et 
+neque pharetra sollicitudin.  Praesent imperdietmi nec ante. 
+Donec ullamcorper, felis non sodales...
+       
+<span class="k">\section*</span><span class="nb">{</span>Unnumbered Section<span class="nb">}</span>
+<span class="k">\addcontentsline</span><span class="nb">{</span>toc<span class="nb">}{</span>section<span class="nb">}{</span>Unnumbered Section<span class="nb">}</span>
+
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit.  
+Etiam lobortis facilisissem.  Nullam nec mi et neque pharetra 
+sollicitudin.  Praesent imperdiet mi necante...
+
+<span class="k">\section</span><span class="nb">{</span>Second Section<span class="nb">}</span>
+       
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit.  
+Etiam lobortis facilisissem.  Nullam nec mi et neque pharetra 
+sollicitudin.  Praesent imperdiet mi necante...
+<span class="k">\end</span><span class="nb">{</span>document<span class="nb">}</span>
+</pre></div>
+</div>
+</div>
+
+<p><a class="open-in-overleaf" target="_blank" href="https://www.overleaf.com/docs?engine=pdflatex
+&amp;snip_name=Generating+a+table+of+contents
+&amp;snip=%5Cdocumentclass%7Barticle%7D%0A%5Ctitle%7BSections+and+Chapters%7D%0A%5Cauthor%7BGubert+Farnsworth%7D%0A%5Cdate%7BAugust+2022%7D%0A%5Cbegin%7Bdocument%7D%0A++%0A%5Cmaketitle%0A++%0A%5Ctableofcontents%0A%0A%5Csection%7BIntroduction%7D%0A+++%0AThis+is+the+first+section.%0A++++++%0ALorem++ipsum++dolor++sit++amet%2C++consectetuer++adipiscing++%0Aelit.+++Etiam++lobortisfacilisis+sem.++Nullam+nec+mi+et+%0Aneque+pharetra+sollicitudin.++Praesent+imperdietmi+nec+ante.+%0ADonec+ullamcorper%2C+felis+non+sodales...%0A+++++++%0A%5Csection%2A%7BUnnumbered+Section%7D%0A%5Caddcontentsline%7Btoc%7D%7Bsection%7D%7BUnnumbered+Section%7D%0A%0ALorem+ipsum+dolor+sit+amet%2C+consectetuer+adipiscing+elit.++%0AEtiam+lobortis+facilisissem.++Nullam+nec+mi+et+neque+pharetra+%0Asollicitudin.++Praesent+imperdiet+mi+necante...%0A%0A%5Csection%7BSecond+Section%7D%0A+++++++%0ALorem+ipsum+dolor+sit+amet%2C+consectetuer+adipiscing+elit.++%0AEtiam+lobortis+facilisissem.++Nullam+nec+mi+et+neque+pharetra+%0Asollicitudin.++Praesent+imperdiet+mi+necante...%0A%5Cend%7Bdocument%7D"><i class="fa fa-share"></i> Open this example in Overleaf.</a>
+</p><p class="mw-empty-elt"></p>
+<p>This example produces the following output:
+
+</p><div class="example"><div class="output">
+<img src="https://images.ctfassets.net/nrgyaltdicpt/MxY592Q6EGsDKMA2mZw0t/fffa41a0a0d30770526f73aff72a7be1/LL30Fig21r-plain.svg" alt="Graphic showing a table of contents produced by LaTeX" style="width:80%;padding:20px" /> 
+</div></div>
+
+<p class="mw-empty-elt"></p><p>Sections, subsections and chapters are automatically included in the table of contents. To manually add entries, such as an unnumbered section, use the command <code>\addcontentsline</code> as shown in the example.
+</p>
+<h2><span class="mw-headline" id="Downloading_your_finished_document">Downloading your finished document</span></h2>
+<p>The following brief video clip shows how to download your project’s source code or the typeset PDF file:
+</p><p class="mw-empty-elt">
+</p><div style="max-width:800px">
+<video controls width="100%" height="100%" src="https://videos.ctfassets.net/nrgyaltdicpt/2n6iw0AUELNtABCuva0oV5/cf27bff3a6099da94362d64645e69dfe/LL30download.mp4" type="video/mp4">
+</video>
+</div>
+
+<p class="mw-empty-elt"></p><p>More information can be found in the Overleaf help article <a href="https://docs.overleaf.com/managing-projects-and-files/downloading-a-project" title="Exporting your work from Overleaf">Exporting your work from Overleaf</a>.
+</p>
+<h2><span class="mw-headline" id="Finding_and_using_LaTeX_packages">Finding and using LaTeX packages</span></h2>
+<p><span class="texhtml" style="font-family:'CMU Serif', cmr10, LMRoman10-Regular, 'Times New Roman', 'Nimbus Roman No9 L', Times, serif">L<span style="text-transform:uppercase;font-size:70%;margin-left:-0.36em;vertical-align:0.3em;line-height:0;margin-right:-0.15em">a</span>T<span style="text-transform:uppercase;margin-left:-0.1667em;vertical-align:-0.5ex;line-height:0;margin-right:-0.125em">e</span>X</span> not only delivers significant typesetting capabilities but also provides a <em>framework for extensibility</em> through the use of add-on <em>packages</em>. Rather than attempting to provide commands and features that “try to do everything”, <span class="texhtml" style="font-family:'CMU Serif', cmr10, LMRoman10-Regular, 'Times New Roman', 'Nimbus Roman No9 L', Times, serif">L<span style="text-transform:uppercase;font-size:70%;margin-left:-0.36em;vertical-align:0.3em;line-height:0;margin-right:-0.15em">a</span>T<span style="text-transform:uppercase;margin-left:-0.1667em;vertical-align:-0.5ex;line-height:0;margin-right:-0.125em">e</span>X</span> is designed to be <em>extensible</em>, allowing users to load external bodies of code (packages) that provide more specialist typesetting capabilities or extend <span class="texhtml" style="font-family:'CMU Serif', cmr10, LMRoman10-Regular, 'Times New Roman', 'Nimbus Roman No9 L', Times, serif">L<span style="text-transform:uppercase;font-size:70%;margin-left:-0.36em;vertical-align:0.3em;line-height:0;margin-right:-0.15em">a</span>T<span style="text-transform:uppercase;margin-left:-0.1667em;vertical-align:-0.5ex;line-height:0;margin-right:-0.125em">e</span>X</span>’s built-in features—such as typesetting tables. As observed in the section <a href="#Adding_images">Adding images</a>, the <code>graphicx</code> package extends <span class="texhtml" style="font-family:'CMU Serif', cmr10, LMRoman10-Regular, 'Times New Roman', 'Nimbus Roman No9 L', Times, serif">L<span style="text-transform:uppercase;font-size:70%;margin-left:-0.36em;vertical-align:0.3em;line-height:0;margin-right:-0.15em">a</span>T<span style="text-transform:uppercase;margin-left:-0.1667em;vertical-align:-0.5ex;line-height:0;margin-right:-0.125em">e</span>X</span> by providing commands to import graphics files and was loaded (in the preamble) by writing
+</p>
+<p class="mw-empty-elt">
+</p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\usepackage</span><span class="nb">{</span>graphicx<span class="nb">}</span>
+</pre></div>
+</div>
+</div>
+<p class="mw-empty-elt"></p>
+<h3><span class="mw-headline" id="Loading_packages">Loading packages</span></h3>
+<p>As noted above, packages are loaded in the document preamble via the <code>\usepackage</code> command but because (many) <span class="texhtml" style="font-family:'CMU Serif', cmr10, LMRoman10-Regular, 'Times New Roman', 'Nimbus Roman No9 L', Times, serif">L<span style="text-transform:uppercase;font-size:70%;margin-left:-0.36em;vertical-align:0.3em;line-height:0;margin-right:-0.15em">a</span>T<span style="text-transform:uppercase;margin-left:-0.1667em;vertical-align:-0.5ex;line-height:0;margin-right:-0.125em">e</span>X</span> packages provide a set of <em>options</em>, which can be used to configure their behaviour, the <code>\usepackage</code> command often looks like this:  
+</p>
+<p class="mw-empty-elt">
+</p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\usepackage</span><span class="na">[options]</span><span class="nb">{</span>somepackage<span class="nb">}</span>
+</pre></div>
+</div>
+</div>
+<p class="mw-empty-elt"></p>
+<p>The square brackets “<code>[...]</code>” inform <span class="texhtml" style="font-family:'CMU Serif', cmr10, LMRoman10-Regular, 'Times New Roman', 'Nimbus Roman No9 L', Times, serif">L<span style="text-transform:uppercase;font-size:70%;margin-left:-0.36em;vertical-align:0.3em;line-height:0;margin-right:-0.15em">a</span>T<span style="text-transform:uppercase;margin-left:-0.1667em;vertical-align:-0.5ex;line-height:0;margin-right:-0.125em">e</span>X</span> which set of options should be applied when it loads <code>somepackage</code>. Within the set of options requested by the user, individual options, or settings, are typically separated by a comma; for example, the <a rel="nofollow" class="external text" href="https://ctan.org/pkg/geometry"><code>geometry</code> package</a> provides many options to configure page layout in <span class="texhtml" style="font-family:'CMU Serif', cmr10, LMRoman10-Regular, 'Times New Roman', 'Nimbus Roman No9 L', Times, serif">L<span style="text-transform:uppercase;font-size:70%;margin-left:-0.36em;vertical-align:0.3em;line-height:0;margin-right:-0.15em">a</span>T<span style="text-transform:uppercase;margin-left:-0.1667em;vertical-align:-0.5ex;line-height:0;margin-right:-0.125em">e</span>X</span>, so a typical use of <code>geometry</code>  might look like this:
+</p>
+<p class="mw-empty-elt">
+</p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\usepackage</span>[total=<span class="nb">{</span>6.5in,8.75in<span class="nb">}</span>,
+top=1.2in, left=0.9in, includefoot]<span class="nb">{</span>geometry<span class="nb">}</span>
+</pre></div>
+</div>
+</div>
+<p class="mw-empty-elt"></p>
+<p>The <code>geometry</code> package is one example of a package written and contributed by members of the global <span class="texhtml" style="font-family:'CMU Serif', cmr10, LMRoman10-Regular, 'Times New Roman', 'Nimbus Roman No9 L', Times, serif">L<span style="text-transform:uppercase;font-size:70%;margin-left:-0.36em;vertical-align:0.3em;line-height:0;margin-right:-0.15em">a</span>T<span style="text-transform:uppercase;margin-left:-0.1667em;vertical-align:-0.5ex;line-height:0;margin-right:-0.125em">e</span>X</span> community and made available, for free, to anyone who wants to use it.
+</p><p>If a <span class="texhtml" style="font-family:'CMU Serif', cmr10, LMRoman10-Regular, 'Times New Roman', 'Nimbus Roman No9 L', Times, serif">L<span style="text-transform:uppercase;font-size:70%;margin-left:-0.36em;vertical-align:0.3em;line-height:0;margin-right:-0.15em">a</span>T<span style="text-transform:uppercase;margin-left:-0.1667em;vertical-align:-0.5ex;line-height:0;margin-right:-0.125em">e</span>X</span> package does not provide any options, or the user wants to use the default values of a package’s options, it would be loaded like this:
+</p>
+<p class="mw-empty-elt">
+</p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\usepackage</span><span class="nb">{</span>somepackage<span class="nb">}</span>
+</pre></div>
+</div>
+</div>
+<p class="mw-empty-elt"></p>
+<p>When you write <code>\usepackage[...]{somepackage}</code> <span class="texhtml" style="font-family:'CMU Serif', cmr10, LMRoman10-Regular, 'Times New Roman', 'Nimbus Roman No9 L', Times, serif">L<span style="text-transform:uppercase;font-size:70%;margin-left:-0.36em;vertical-align:0.3em;line-height:0;margin-right:-0.15em">a</span>T<span style="text-transform:uppercase;margin-left:-0.1667em;vertical-align:-0.5ex;line-height:0;margin-right:-0.125em">e</span>X</span> looks for a corresponding file called <code><em>somepackage</em>.sty</code>, which it needs to load and process—to make the package commands available and execute any other code provided by that package. If <span class="texhtml" style="font-family:'CMU Serif', cmr10, LMRoman10-Regular, 'Times New Roman', 'Nimbus Roman No9 L', Times, serif">L<span style="text-transform:uppercase;font-size:70%;margin-left:-0.36em;vertical-align:0.3em;line-height:0;margin-right:-0.15em">a</span>T<span style="text-transform:uppercase;margin-left:-0.1667em;vertical-align:-0.5ex;line-height:0;margin-right:-0.125em">e</span>X</span> cannot find <code><em>somepackage</em>.sty</code> it will terminate with an error, as demonstrated in the following Overleaf example:
+</p>
+<p class="mw-empty-elt"></p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\documentclass</span><span class="na">[12pt, letterpaper]</span><span class="nb">{</span>article<span class="nb">}</span>
+<span class="k">\usepackage</span><span class="nb">{</span>somepackage<span class="nb">}</span><span class="c">% a NON-EXISTENT package</span>
+<span class="k">\begin</span><span class="nb">{</span>document<span class="nb">}</span>
+This will fail!
+<span class="k">\end</span><span class="nb">{</span>document<span class="nb">}</span>
+</pre></div>
+</div>
+</div>
+
+<p><a class="open-in-overleaf" target="_blank" href="https://www.overleaf.com/docs?engine=pdflatex
+&amp;snip_name=Error+due+to+missing+package
+&amp;snip=%5Cdocumentclass%5B12pt%2C+letterpaper%5D%7Barticle%7D%0A%5Cusepackage%7Bsomepackage%7D%25+a+NON-EXISTENT+package%0A%5Cbegin%7Bdocument%7D%0AThis+will+fail%21%0A%5Cend%7Bdocument%7D"><i class="fa fa-share"></i> Open this <em><strong>error-generating example</strong></em> on Overleaf</a>
+</p><p class="mw-empty-elt"></p>
+<p>This example produces the following output:
+</p><p><img alt="Image showing error causes by a missing package" src="https://sharelatex-wiki-cdn-671420.c.cdn77.org/learn-scripts/images/6/60/LL30packagefail.png" decoding="async" width="800" height="398" />
+</p>
+<h3><span class="mw-headline" id="Finding_information_about_packages:_CTAN">Finding information about packages: CTAN</span></h3>
+<p>Packages are distributed through the <a rel="nofollow" class="external text" href="https://www.ctan.org/">Comprehensive TeX Archive Network</a>, usually referred to as CTAN, which, at the time of writing, hosts 6287 packages from 2881 contributors. CTAN <a rel="nofollow" class="external text" href="https://www.ctan.org/ctan">describes itself</a> as 
+</p>
+<blockquote>
+<p>... a set of Internet sites around the world that offer TEX-related material for download.
+</p>
+</blockquote>
+<p>You can browse CTAN to look for useful packages; for example:
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://www.ctan.org/topics/cloud">by topic</a></li>
+<li><a rel="nofollow" class="external text" href="https://www.ctan.org/pkg">alphabetically</a> (useful if you know the package name)</li></ul>
+<p>You can also use the <a rel="nofollow" class="external text" href="https://www.ctan.org/pkg">search facility</a> (at the top of the page).
+</p>
+<h3><span class="mw-headline" id="Packages_available_on_Overleaf:_Introducing_TeX_Live">Packages available on Overleaf: Introducing TeX Live</span></h3>
+<p>Once per year a (large) <em>subset</em> of packages hosted on CTAN, plus <span class="texhtml" style="font-family:'CMU Serif', cmr10, LMRoman10-Regular, 'Times New Roman', 'Nimbus Roman No9 L', Times, serif">L<span style="text-transform:uppercase;font-size:70%;margin-left:-0.36em;vertical-align:0.3em;line-height:0;margin-right:-0.15em">a</span>T<span style="text-transform:uppercase;margin-left:-0.1667em;vertical-align:-0.5ex;line-height:0;margin-right:-0.125em">e</span>X</span>-related fonts and other software, is collated and distributed as a system called <a rel="nofollow" class="external text" href="https://tug.org/texlive/">TeX Live</a>, which can be used to install your own (local) LaTeX setup. In fact, <a rel="nofollow" class="external text" href="https://www.overleaf.com/learn/latex/Overleaf_and_TeX_Live">Overleaf’s servers also use TeX Live</a> and are updated when a new version of TeX Live is released. Overleaf’s TeX Live updates are not immediate but take place a few months post-release, giving us time to perform compatibility tests of the new TeX Live version with the <a rel="nofollow" class="external text" href="https://www.overleaf.com/gallery">thousands of templates contained in our gallery</a>. For example, here is our <a rel="nofollow" class="external text" href="https://www.overleaf.com/blog/tex-live-2025-is-now-available">TeX Live 2025 upgrade announcement</a>. 
+</p><p>Although TeX Live contains a (large) <em>subset</em> of CTAN packages it is possible to find an interesting package, such as <a rel="nofollow" class="external text" href="https://ctan.org/pkg/igo?lang=en"><code>igo</code> for typesetting Go diagrams</a>, which is hosted on CTAN but not included in (distributed by) TeX Live and thus unavailable on Overleaf. Some packages hosted on CTAN are not part of TeX Live due to a variety of reasons: perhaps a package is obsolete, has licensing problems, is extremely new (recently uploaded) or has platform dependencies, such as working on Windows but not Linux. 
+</p><p>New packages, and updates to existing ones, are uploaded to CTAN all year round but updates to TeX Live are distributed annually; consequently, packages contained in the current version of TeX Live will not be as up-to-date as those hosted on CTAN. Because Overleaf’s servers use TeX Live it is possible that packages installed on our servers—i.e., ones available to our users—might not be the very latest versions available on CTAN but, generally, this is unlikely to be problematic.
+</p>
+
+
+
+
+</div></div></div></div></main></div><nav class="col-12 col-md-3 order-md-1 contents card" aria-label="Documentation and articles"><div class="card-body"><div class="mw-parser-output"><ul><li><a href="/learn" title="Main Page">Documentation Home</a></li>
+<li><a href="/learn/latex/Learn_LaTeX_in_30_minutes" title="Learn LaTeX in 30 minutes">Learn LaTeX in 30 minutes</a></li></ul>
+<h2><span class="mw-headline">Overleaf guides</span></h2>
+<ul><li><a rel="nofollow" class="external text" href="https://docs.overleaf.com/">Overleaf user documentation</a></li>
+<li><a rel="nofollow" class="external text" href="https://docs.overleaf.com/groups">Overleaf group administration</a></li>
+<li><a rel="nofollow" class="external text" href="https://docs.overleaf.com/commons">Overleaf Commons administration</a></li>
+<li><a rel="nofollow" class="external text" href="https://docs.overleaf.com/on-premises">Overleaf on-premises</a></li></ul>
+<h2><span class="mw-headline">LaTeX basics</span></h2>
+<ul><li><a href="/learn/latex/Creating_a_document_in_LaTeX" class="mw-redirect" title="Creating a document in LaTeX">Creating your first LaTeX document</a></li>
+<li><a href="/learn/latex/Paragraphs_and_new_lines" title="Paragraphs and new lines">Paragraphs and new lines</a></li>
+<li><a href="/learn/latex/Bold%2C_italics_and_underlining" title="Bold, italics and underlining">Bold, italics and underlining</a></li>
+<li><a href="/learn/latex/Lists" title="Lists">Lists</a></li>
+<li><a href="/learn/latex/Errors" title="Errors">Errors</a></li></ul>
+<h2><span class="mw-headline">Mathematics</span></h2>
+<ul><li><a href="/learn/latex/Mathematical_expressions" title="Mathematical expressions">Mathematical expressions</a></li>
+<li><a href="/learn/latex/Subscripts_and_superscripts" title="Subscripts and superscripts">Subscripts and superscripts</a></li>
+<li><a href="/learn/latex/Brackets_and_Parentheses" title="Brackets and Parentheses">Brackets and Parentheses</a></li>
+<li><a href="/learn/latex/Matrices" title="Matrices">Matrices</a></li>
+<li><a href="/learn/latex/Fractions_and_Binomials" title="Fractions and Binomials">Fractions and Binomials</a></li>
+<li><a href="/learn/latex/Aligning_equations_with_amsmath" title="Aligning equations with amsmath">Aligning equations</a></li>
+<li><a href="/learn/latex/Operators" title="Operators">Operators</a></li>
+<li><a href="/learn/latex/Spacing_in_math_mode" title="Spacing in math mode">Spacing in math mode</a></li>
+<li><a href="/learn/latex/Integrals%2C_sums_and_limits" title="Integrals, sums and limits">Integrals, sums and limits</a></li>
+<li><a href="/learn/latex/Display_style_in_math_mode" title="Display style in math mode">Display style in math mode</a></li>
+<li><a href="/learn/latex/List_of_Greek_letters_and_math_symbols" title="List of Greek letters and math symbols">List of Greek letters and math symbols</a></li>
+<li><a href="/learn/latex/Mathematical_fonts" title="Mathematical fonts">Mathematical fonts</a></li>
+<li><a rel="nofollow" class="external text" href="https://www.overleaf.com/learn/how-to/Using_the_Symbol_Palette_in_Overleaf">Using the Symbol Palette in Overleaf</a></li></ul>
+<h2><span class="mw-headline">Figures and tables</span></h2>
+<ul><li><a href="/learn/latex/Tables" title="Tables">Tables</a></li>
+<li><a href="/learn/latex/Positioning_images_and_tables" title="Positioning images and tables">Positioning Images and Tables</a></li>
+<li><a href="/learn/latex/Lists_of_tables_and_figures" title="Lists of tables and figures">Lists of Tables and Figures</a></li>
+<li><a href="/learn/latex/Picture_environment" title="Picture environment">Drawing Diagrams Directly in LaTeX</a></li>
+<li><a href="/learn/latex/TikZ_package" title="TikZ package">TikZ package</a></li></ul>
+<h2><span class="mw-headline">Document structure</span></h2>
+<ul><li><a href="/learn/latex/Sections_and_chapters" title="Sections and chapters">Sections and chapters</a></li>
+<li><a href="/learn/latex/Table_of_contents" title="Table of contents">Table of contents</a></li>
+<li><a href="/learn/latex/Cross_referencing_sections%2C_equations_and_floats" title="Cross referencing sections, equations and floats">Cross referencing sections, equations and floats</a></li>
+<li><a href="/learn/latex/Indices" title="Indices">Indices</a></li>
+<li><a href="/learn/latex/Glossaries" title="Glossaries">Glossaries</a></li>
+<li><a href="/learn/latex/Nomenclatures" title="Nomenclatures">Nomenclatures</a></li>
+<li><a href="/learn/latex/Management_in_a_large_project" title="Management in a large project">Management in a large project</a></li>
+<li><a href="/learn/latex/Multi-file_LaTeX_projects" title="Multi-file LaTeX projects">Multi-file LaTeX projects</a></li>
+<li><a href="/learn/latex/Hyperlinks" title="Hyperlinks">Hyperlinks</a></li></ul>
+<h2><span class="mw-headline">Formatting</span></h2>
+<ul><li><a href="/learn/latex/Lengths_in_LaTeX" title="Lengths in LaTeX">Lengths in <span class="texhtml" style="font-family:'CMU Serif', cmr10, LMRoman10-Regular, 'Times New Roman', 'Nimbus Roman No9 L', Times, serif">L<span style="text-transform:uppercase;font-size:70%;margin-left:-0.36em;vertical-align:0.3em;line-height:0;margin-right:-0.15em">a</span>T<span style="text-transform:uppercase;margin-left:-0.1667em;vertical-align:-0.5ex;line-height:0;margin-right:-0.125em">e</span>X</span></a></li>
+<li><a href="/learn/latex/Headers_and_footers" title="Headers and footers">Headers and footers</a></li>
+<li><a href="/learn/latex/Page_numbering" title="Page numbering">Page numbering</a></li>
+<li><a href="/learn/latex/Paragraph_formatting" class="mw-redirect" title="Paragraph formatting">Paragraph formatting</a></li>
+<li><a href="/learn/latex/Line_breaks_and_blank_spaces" title="Line breaks and blank spaces">Line breaks and blank spaces</a></li>
+<li><a href="/learn/latex/Text_alignment" title="Text alignment">Text alignment</a></li>
+<li><a href="/learn/latex/Page_size_and_margins" title="Page size and margins">Page size and margins</a></li>
+<li><a href="/learn/latex/Single_sided_and_double_sided_documents" title="Single sided and double sided documents">Single sided and double sided documents</a></li>
+<li><a href="/learn/latex/Multiple_columns" title="Multiple columns">Multiple columns</a></li>
+<li><a href="/learn/latex/Counters" title="Counters">Counters</a></li>
+<li><a href="/learn/latex/Code_listing" title="Code listing">Code listing</a></li>
+<li><a href="/learn/latex/Code_Highlighting_with_minted" title="Code Highlighting with minted">Code Highlighting with minted</a></li>
+<li><a href="/learn/latex/Using_colours_in_LaTeX" class="mw-redirect" title="Using colours in LaTeX">Using colours in LaTeX</a></li>
+<li><a href="/learn/latex/Footnotes" title="Footnotes">Footnotes</a></li>
+<li><a href="/learn/latex/Margin_notes" title="Margin notes">Margin notes</a></li></ul>
+<h2><span class="mw-headline">References and citations</span></h2>
+<ul><li><a href="/learn/latex/Bibliography_management_with_bibtex" title="Bibliography management with bibtex">Bibliography management with bibtex</a></li>
+<li><a href="/learn/latex/Bibliography_management_with_natbib" title="Bibliography management with natbib">Bibliography management with natbib</a></li>
+<li><a href="/learn/latex/Bibliography_management_with_biblatex" title="Bibliography management with biblatex">Bibliography management with biblatex</a></li>
+<li><a href="/learn/latex/Bibtex_bibliography_styles" title="Bibtex bibliography styles">Bibtex bibliography styles</a></li>
+<li><a href="/learn/latex/Natbib_bibliography_styles" title="Natbib bibliography styles">Natbib bibliography styles</a></li>
+<li><a href="/learn/latex/Natbib_citation_styles" title="Natbib citation styles">Natbib citation styles</a></li>
+<li><a href="/learn/latex/Biblatex_bibliography_styles" title="Biblatex bibliography styles">Biblatex bibliography styles</a></li>
+<li><a href="/learn/latex/Biblatex_citation_styles" title="Biblatex citation styles">Biblatex citation styles</a></li></ul>
+<h2><span class="mw-headline">Fonts</span></h2>
+<ul><li><a href="/learn/latex/Font_sizes%2C_families%2C_and_styles" title="Font sizes, families, and styles">Font sizes, families, and styles</a></li>
+<li><a href="/learn/latex/Font_typefaces" title="Font typefaces">Font typefaces</a></li>
+<li><a href="/learn/latex/XeLaTeX" title="XeLaTeX">Supporting modern fonts with <span class="texhtml" style="font-family:'CMU Serif', cmr10, LMRoman10-Regular, 'Times New Roman', 'Nimbus Roman No9 L', Times, serif">X<span style="text-transform:uppercase;margin-left:-0.1667em;vertical-align:-0.5ex;line-height:0;margin-right:-0.075em">Ǝ</span>L<span style="text-transform:uppercase;font-size:70%;margin-left:-0.36em;vertical-align:0.3em;line-height:0;margin-right:-0.15em">a</span>T<span style="text-transform:uppercase;margin-left:-0.1667em;vertical-align:-0.5ex;line-height:0;margin-right:-0.125em">e</span>X</span></a></li></ul>
+<h2><span class="mw-headline">Presentations</span></h2>
+<ul><li><a href="/learn/latex/Beamer" title="Beamer">Beamer</a></li>
+<li><a href="/learn/latex/Powerdot" title="Powerdot">Powerdot</a></li>
+<li><a href="/learn/latex/Posters" title="Posters">Posters</a></li></ul>
+<h2><span class="mw-headline">Commands</span></h2>
+<ul><li><a href="/learn/latex/Commands" title="Commands">Commands</a></li>
+<li><a href="/learn/latex/Environments" title="Environments">Environments</a></li></ul>
+<h2><span class="mw-headline">Languages</span></h2>
+<ul><li><a href="/learn/latex/Multilingual_typesetting_on_Overleaf_using_polyglossia_and_fontspec" title="Multilingual typesetting on Overleaf using polyglossia and fontspec">Multilingual typesetting on Overleaf using polyglossia and fontspec</a></li>
+<li><a href="/learn/latex/Multilingual_typesetting_on_Overleaf_using_babel_and_fontspec" title="Multilingual typesetting on Overleaf using babel and fontspec">Multilingual typesetting on Overleaf using babel and fontspec</a></li>
+<li><a href="/learn/latex/International_language_support" title="International language support">International language support</a></li>
+<li><a href="/learn/latex/Typesetting_quotations" title="Typesetting quotations">Quotations and quotation marks</a></li>
+<li><a href="/learn/latex/Arabic" title="Arabic">Arabic</a></li>
+<li><a href="/learn/latex/Chinese" title="Chinese">Chinese</a></li>
+<li><a href="/learn/latex/French" title="French">French</a></li>
+<li><a href="/learn/latex/German" title="German">German</a></li>
+<li><a href="/learn/latex/Greek" title="Greek">Greek</a></li>
+<li><a href="/learn/latex/Italian" title="Italian">Italian</a></li>
+<li><a href="/learn/latex/Japanese" title="Japanese">Japanese</a></li>
+<li><a href="/learn/latex/Korean" title="Korean">Korean</a></li>
+<li><a href="/learn/latex/Portuguese" title="Portuguese">Portuguese</a></li>
+<li><a href="/learn/latex/Russian" title="Russian">Russian</a></li>
+<li><a href="/learn/latex/Spanish" title="Spanish">Spanish</a></li></ul>
+<h2><span class="mw-headline">Field specific</span></h2>
+<ul><li><a href="/learn/latex/Theorems_and_proofs" title="Theorems and proofs">Theorems and proofs</a></li>
+<li><a href="/learn/latex/Chemistry_formulae" title="Chemistry formulae">Chemistry formulae</a></li>
+<li><a href="/learn/latex/Feynman_diagrams" title="Feynman diagrams">Feynman diagrams</a></li>
+<li><a href="/learn/latex/Molecular_orbital_diagrams" title="Molecular orbital diagrams">Molecular orbital diagrams</a></li>
+<li><a href="/learn/latex/Chess_notation" title="Chess notation">Chess notation</a></li>
+<li><a href="/learn/latex/Knitting_patterns" title="Knitting patterns">Knitting patterns</a></li>
+<li><a href="/learn/latex/CircuiTikz_package" title="CircuiTikz package">CircuiTikz package</a></li>
+<li><a href="/learn/latex/Pgfplots_package" title="Pgfplots package">Pgfplots package</a></li>
+<li><a href="/learn/latex/Typesetting_exams_in_LaTeX" title="Typesetting exams in LaTeX">Typesetting exams in LaTeX</a></li>
+<li><a href="/learn/latex/Attribute_Value_Matrices" title="Attribute Value Matrices">Attribute Value Matrices</a></li></ul>
+<h2><span class="mw-headline">Class files</span></h2>
+<ul><li><a href="/learn/latex/Understanding_packages_and_class_files" title="Understanding packages and class files">Understanding packages and class files</a></li>
+<li><a href="/learn/latex/List_of_packages_and_class_files" class="mw-redirect" title="List of packages and class files">List of packages and class files</a></li>
+<li><a href="/learn/latex/Writing_your_own_package" title="Writing your own package">Writing your own package</a></li>
+<li><a href="/learn/latex/Writing_your_own_class" title="Writing your own class">Writing your own class</a></li></ul>
+<h2><span></span><span class="mw-headline">Advanced TeX/LaTeX</span></h2>
+<ul><li><a href="/learn/latex/Articles" title="Articles">In-depth technical articles on TeX/LaTeX</a></li></ul>
+
+
+
+
+</div></div></nav></div></div></div><footer class="fat-footer hidden-print"><div class="fat-footer-container"><div class="fat-footer-sections"><div class="footer-section" id="footer-brand"><a class="footer-brand" href="/" aria-label="Overleaf"></a></div><div class="footer-section"><h2 class="footer-section-heading">关于</h2><ul class="list-unstyled"><li><a href="/about">关于我们</a></li><li><a href="https://digitalscience.pinpointhq.com/">工作与职业</a></li><li><a href="/blog">博客</a></li></ul></div><div class="footer-section"><h2 class="footer-section-heading">Solutions</h2><ul class="list-unstyled"><li><a href="/for/enterprises">商业用途</a></li><li><a href="/for/universities">为大学提供</a></li><li><a href="/for/government">为政府提供</a></li><li><a href="/for/publishers">为出版社提供</a></li><li><a href="/about/customer-stories">Customer stories</a></li></ul></div><div class="footer-section"><h2 class="footer-section-heading">学习</h2><ul class="list-unstyled"><li><a href="/learn/latex/Learn_LaTeX_in_30_minutes">30分钟学会 LaTeX</a></li><li><a href="/latex/templates">模板</a></li><li><a href="/events/webinars">在线教程</a></li><li><a href="/learn/latex/Tutorials">教程</a></li><li><a href="/learn/latex/Inserting_Images">如何插入图片</a></li><li><a href="/learn/latex/Tables">如何创建表格</a></li></ul></div><div class="footer-section"><h2 class="footer-section-heading">Pricing</h2><ul class="list-unstyled"><li><a href="/user/subscription/plans?itm_referrer=footer-for-indv">For individuals</a></li><li><a href="/user/subscription/plans?plan=group&amp;itm_referrer=footer-for-groups">For groups and organizations</a></li><li><a href="/user/subscription/plans?itm_referrer=footer-for-students#student-annual">为学生提供</a></li></ul></div><div class="footer-section"><h2 class="footer-section-heading">加入我们</h2><ul class="list-unstyled"><li><a href="https://forms.gle/67PSpN1bLnjGCmPQ9">让我们知道您的想法</a></li><li><a href="/beta/participate">加入beta计划</a></li></ul></div><div class="footer-section"><h2 class="footer-section-heading">帮助</h2><ul class="list-unstyled"><li><a href="/learn">文档 </a></li><li><a href="/contact">联系我们 </a></li><li><a href="https://status.overleaf.com/">网站状态</a></li></ul></div></div><div class="fat-footer-base"><div class="fat-footer-base-section fat-footer-base-meta"><div class="fat-footer-base-item"><div class="fat-footer-base-copyright">© 2026 Overleaf</div><a href="/legal">隐私和条款</a><a href="https://www.digital-science.com/security-certifications/">合规性</a></div><ul class="fat-footer-base-item list-unstyled fat-footer-base-language"><li class="dropdown dropup subdued language-picker" dropdown><button class="btn btn-link btn-inline-link" id="language-picker-toggle" dropdown-toggle data-ol-lang-selector-tooltip data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="Select 语言" tooltip="语言" title="语言"><span class="material-symbols" aria-hidden="true" translate="no">translate</span>&nbsp;<span class="language-picker-text">简体中文</span></button><ul class="dropdown-menu dropdown-menu-sm-width" role="menu" aria-labelledby="language-picker-toggle"><li class="dropdown-header">语言</li><li class="lng-option"><a class="menu-indent dropdown-item" href="https://www.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes" role="menuitem" aria-selected="false">English</a></li><li class="lng-option"><a class="menu-indent dropdown-item" href="https://cs.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes" role="menuitem" aria-selected="false">Čeština</a></li><li class="lng-option"><a class="menu-indent dropdown-item" href="https://es.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes" role="menuitem" aria-selected="false">Español</a></li><li class="lng-option"><a class="menu-indent dropdown-item" href="https://pt.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes" role="menuitem" aria-selected="false">Português</a></li><li class="lng-option"><a class="menu-indent dropdown-item" href="https://fr.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes" role="menuitem" aria-selected="false">Français</a></li><li class="lng-option"><a class="menu-indent dropdown-item" href="https://de.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes" role="menuitem" aria-selected="false">Deutsch</a></li><li class="lng-option"><a class="menu-indent dropdown-item" href="https://sv.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes" role="menuitem" aria-selected="false">Svenska</a></li><li class="lng-option"><a class="menu-indent dropdown-item" href="https://tr.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes" role="menuitem" aria-selected="false">Türkçe</a></li><li class="lng-option"><a class="menu-indent dropdown-item" href="https://it.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes" role="menuitem" aria-selected="false">Italiano</a></li><li class="lng-option"><a class="menu-indent dropdown-item active" href="https://cn.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes" role="menuitem" aria-selected="true">简体中文<span class="material-symbols dropdown-item-trailing-icon" aria-hidden="true" translate="no">check</span></a></li><li class="lng-option"><a class="menu-indent dropdown-item" href="https://no.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes" role="menuitem" aria-selected="false">Norsk</a></li><li class="lng-option"><a class="menu-indent dropdown-item" href="https://ru.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes" role="menuitem" aria-selected="false">Русский</a></li><li class="lng-option"><a class="menu-indent dropdown-item" href="https://da.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes" role="menuitem" aria-selected="false">Dansk</a></li><li class="lng-option"><a class="menu-indent dropdown-item" href="https://ko.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes" role="menuitem" aria-selected="false">한국어</a></li><li class="lng-option"><a class="menu-indent dropdown-item" href="https://ja.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes" role="menuitem" aria-selected="false">日本語</a></li></ul></li></ul></div><div class="fat-footer-base-section fat-footer-base-social"><div class="fat-footer-base-item"><a class="fat-footer-social x-logo" href="https://x.com/overleaf"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1227" height="25"><path d="M714.163 519.284L1160.89 0H1055.03L667.137 450.887L357.328 0H0L468.492 681.821L0 1226.37H105.866L515.491 750.218L842.672 1226.37H1200L714.137 519.284H714.163ZM569.165 687.828L521.697 619.934L144.011 79.6944H306.615L611.412 515.685L658.88 583.579L1055.08 1150.3H892.476L569.165 687.854V687.828Z"></path></svg><span class="visually-hidden">Overleaf 在 X</span></a><a class="fat-footer-social facebook-logo" href="https://www.facebook.com/overleaf.editor"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 666.66668 666.66717" height="25"><defs><clipPath id="a" clipPathUnits="userSpaceOnUse"><path d="M0 700h700V0H0Z"></path></clipPath></defs><g clip-path="url(#a)" transform="matrix(1.33333 0 0 -1.33333 -133.333 800)"><path class="background" d="M0 0c0 138.071-111.929 250-250 250S-500 138.071-500 0c0-117.245 80.715-215.622 189.606-242.638v166.242h-51.552V0h51.552v32.919c0 85.092 38.508 124.532 122.048 124.532 15.838 0 43.167-3.105 54.347-6.211V81.986c-5.901.621-16.149.932-28.882.932-40.993 0-56.832-15.528-56.832-55.9V0h81.659l-14.028-76.396h-67.631v-171.773C-95.927-233.218 0-127.818 0 0" fill="#0866ff" transform="translate(600 350)"></path><path class="text" d="m0 0 14.029 76.396H-67.63v27.019c0 40.372 15.838 55.899 56.831 55.899 12.733 0 22.981-.31 28.882-.931v69.253c-11.18 3.106-38.509 6.212-54.347 6.212-83.539 0-122.048-39.441-122.048-124.533V76.396h-51.552V0h51.552v-166.242a250.559 250.559 0 0 1 60.394-7.362c10.254 0 20.358.632 30.288 1.831V0Z" fill="#fff" transform="translate(447.918 273.604)"></path></g></svg><span class="visually-hidden">Overleaf 在 Facebook</span></a><a class="fat-footer-social linkedin-logo" href="https://www.linkedin.com/company/writelatex-limited"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72 72" height="25"><g fill="none" fill-rule="evenodd"><path class="background" fill="#2867b2" d="M8 72h56a8 8 0 0 0 8-8V8a8 8 0 0 0-8-8H8a8 8 0 0 0-8 8v56a8 8 0 0 0 8 8"></path><path class="text" fill="#FFF" d="M62 62H51.316V43.802c0-4.99-1.896-7.777-5.845-7.777-4.296 0-6.54 2.901-6.54 7.777V62H28.632V27.333H38.93v4.67s3.096-5.729 10.453-5.729c7.353 0 12.617 4.49 12.617 13.777zM16.35 22.794c-3.508 0-6.35-2.864-6.35-6.397C10 12.864 12.842 10 16.35 10c3.507 0 6.347 2.864 6.347 6.397 0 3.533-2.84 6.397-6.348 6.397ZM11.032 62h10.736V27.333H11.033V62"></path></g></svg><span class="visually-hidden">Overleaf 在 LinkedIn</span></a></div></div></div></div></footer><section class="cookie-banner hidden-print hidden" aria-label="Cookie banner"><div class="cookie-banner-content">We only use cookies for essential purposes and to improve your experience on our site. You can find out more in our <a href="/legal#Cookies">cookie policy</a>.</div><div class="cookie-banner-actions"><button class="btn btn-link btn-sm" type="button" data-ol-cookie-banner-set-consent="essential">Essential cookies only</button><button class="btn btn-primary btn-sm" type="button" data-ol-cookie-banner-set-consent="all">Accept all cookies</button></div></section><div class="modal fade" id="contactUsModal" tabindex="-1" aria-labelledby="contactUsModalLabel" data-ol-contact-form-modal="contact-us"><div class="modal-dialog"><form name="contactForm" data-ol-async-form data-ol-contact-form data-ol-contact-form-with-search="true" role="form" aria-label="联系我们" action="/support"><input name="inbox" type="hidden" value="support"><div class="modal-content"><div class="modal-header"><h4 class="modal-title" id="contactUsModalLabel">联系</h4><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="关闭"><span aria-hidden="true"></span></button></div><div class="modal-body"><div data-ol-not-sent><div class="modal-form-messages"><div class="form-messages-bottom-margin" data-ol-form-messages-new-style="" role="alert"></div><div class="notification notification-type-error" hidden data-ol-custom-form-message="error_performing_request" role="alert" aria-live="polite"><div class="notification-icon"><span class="material-symbols" aria-hidden="true" translate="no">error</span></div><div class="notification-content text-left">与服务器交谈时出错 :(。请再试一次。.</div></div></div><label class="form-label" for="contact-us-email-211">电子邮件</label><div class="mb-3"><input class="form-control" name="email" id="contact-us-email-211" required type="email" spellcheck="false" maxlength="255" value="wangyc030924@gmail.com" data-ol-contact-form-email-input></div><div class="form-group"><label class="form-label" for="contact-us-subject-211">主题</label><div class="mb-3"><input class="form-control" name="subject" id="contact-us-subject-211" required autocomplete="off" maxlength="255"><div data-ol-search-results-wrapper hidden><ul class="dropdown-menu contact-suggestions-dropdown show" data-ol-search-results aria-role="region" aria-label="符合你的主题的帮助文章"><li class="dropdown-header">您检查过我们的 <a href="/learn/kb" target="_blank">知识库</a> 了吗？</li><li><hr class="dropdown-divider"></li><div data-ol-search-results-container></div></ul></div></div></div><label class="form-label" for="contact-us-sub-subject-211">你有什么需要帮助的？</label><div class="mb-3"><select class="form-select" name="subSubject" id="contact-us-sub-subject-211" required autocomplete="off"><option selected disabled>请选择…</option><option>使用 LaTeX</option><option>使用 Overleaf 编辑器</option><option>使用 Writefull</option><option>登录或管理您的帐户</option><option>管理您的订阅</option><option>使用高级功能</option><option>联系销售团队</option><option>其他</option></select></div><label class="form-label" for="contact-us-project-url-211">受影响的项目URL (选填)</label><div class="mb-3"><input class="form-control" name="projectUrl" id="contact-us-project-url-211"></div><label class="form-label" for="contact-us-message-211">告诉我们您需要什么帮助</label><div class="mb-3"><textarea class="form-control contact-us-modal-textarea" name="message" id="contact-us-message-211" required type="text"></textarea></div><div class="mb-3 d-none"><label class="visually-hidden" for="important-message">Important message</label><input class="form-control" name="important_message" id="important-message"></div></div><div class="mt-2" data-ol-sent hidden><h5 class="message-received">收到消息</h5><p>感谢您联系我们。我们的团队将尽快通过电子邮件回复您。</p><p>Email:&nbsp;<span data-ol-contact-form-thank-you-email>wangyc030924@gmail.com</span></p></div></div><div class="modal-footer" data-ol-not-sent><button class="btn btn-primary" type="submit" data-ol-disabled-inflight event-tracking="form-submitted-contact-us" event-tracking-mb="true" event-tracking-trigger="click" event-segmentation="{&quot;location&quot;:&quot;contact-us-form&quot;}"><span data-ol-inflight="idle">发送消息</span><span hidden data-ol-inflight="pending">发送中&hellip;</span></button></div></div></form></div></div></body><script type="text/javascript" nonce="KU6GG7EmVDvL8NlyWeiK/g==" src="https://cdn.overleaf.com/js/runtime-e50f9d73b46346c3d100.js"></script><script type="text/javascript" nonce="KU6GG7EmVDvL8NlyWeiK/g==" src="https://cdn.overleaf.com/js/7582-aff640acb68d6297d6a1.js"></script><script type="text/javascript" nonce="KU6GG7EmVDvL8NlyWeiK/g==" src="https://cdn.overleaf.com/js/5214-925d7d0723e09cc4bed7.js"></script><script type="text/javascript" nonce="KU6GG7EmVDvL8NlyWeiK/g==" src="https://cdn.overleaf.com/js/8732-61de629a6fc4a719a5e1.js"></script><script type="text/javascript" nonce="KU6GG7EmVDvL8NlyWeiK/g==" src="https://cdn.overleaf.com/js/1229-159bc67c15781745a601.js"></script><script type="text/javascript" nonce="KU6GG7EmVDvL8NlyWeiK/g==" src="https://cdn.overleaf.com/js/bootstrap-ca3d472c362809498e35.js"></script><script type="text/javascript" nonce="KU6GG7EmVDvL8NlyWeiK/g==" src="https://cdn.overleaf.com/js/7582-aff640acb68d6297d6a1.js"></script><script type="text/javascript" nonce="KU6GG7EmVDvL8NlyWeiK/g==" src="https://cdn.overleaf.com/js/5214-925d7d0723e09cc4bed7.js"></script><script type="text/javascript" nonce="KU6GG7EmVDvL8NlyWeiK/g==" src="https://cdn.overleaf.com/js/2382-84ee386517c8f6bc04ac.js"></script><script type="text/javascript" nonce="KU6GG7EmVDvL8NlyWeiK/g==" src="https://cdn.overleaf.com/js/3958-4e0574e09fdc6c328fb2.js"></script><script type="text/javascript" nonce="KU6GG7EmVDvL8NlyWeiK/g==" src="https://cdn.overleaf.com/js/5250-1a549b07c43bd5b458fa.js"></script><script type="text/javascript" nonce="KU6GG7EmVDvL8NlyWeiK/g==" src="https://cdn.overleaf.com/js/9612-ea5723eb0a6a9aabd0c5.js"></script><script type="text/javascript" nonce="KU6GG7EmVDvL8NlyWeiK/g==" src="https://cdn.overleaf.com/js/4686-861a42ffc686a61b426a.js"></script><script type="text/javascript" nonce="KU6GG7EmVDvL8NlyWeiK/g==" src="https://cdn.overleaf.com/js/6348-67874eb8f2110fcea658.js"></script><script type="text/javascript" nonce="KU6GG7EmVDvL8NlyWeiK/g==" src="https://cdn.overleaf.com/js/7519-7197b5dbfa50a3422b84.js"></script><script type="text/javascript" nonce="KU6GG7EmVDvL8NlyWeiK/g==" src="https://cdn.overleaf.com/js/1164-57c4b7e55ea8c193937f.js"></script><script type="text/javascript" nonce="KU6GG7EmVDvL8NlyWeiK/g==" src="https://cdn.overleaf.com/js/7474-746e19e241369e799aa1.js"></script><script type="text/javascript" nonce="KU6GG7EmVDvL8NlyWeiK/g==" src="https://cdn.overleaf.com/js/2439-bfbabedb411e57731153.js"></script><script type="text/javascript" nonce="KU6GG7EmVDvL8NlyWeiK/g==" src="https://cdn.overleaf.com/js/modules/learn/pages/learn-c3ba36015c6febb10012.js"></script><script type="text/javascript" nonce="KU6GG7EmVDvL8NlyWeiK/g==" src="https://cdn.overleaf.com/js/7582-aff640acb68d6297d6a1.js"></script><script type="text/javascript" nonce="KU6GG7EmVDvL8NlyWeiK/g==" src="https://cdn.overleaf.com/js/tracking-a8521fc28a7f7dd6b42a.js"></script></html>
